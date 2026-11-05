@@ -36,6 +36,9 @@ const writeJSON = (f, v) => fs.writeFileSync(f, JSON.stringify(v, null, 2));
 
 let settings = readJSON(SETTINGS_FILE, null);
 if (!settings) { settings = DEFAULTS(); writeJSON(SETTINGS_FILE, settings); }
+let jobs = readJSON(JOBS_FILE, []);
+const saveJobs = () => writeJSON(JOBS_FILE, jobs);
+const saveSettings = () => writeJSON(SETTINGS_FILE, settings);
 // Hosted mode: admin is reachable remotely, so a strong password must come from the environment.
 if (process.env.ALLOW_REMOTE_ADMIN) {
   const pw = process.env.ADMIN_PASSWORD || '';
@@ -44,9 +47,6 @@ if (process.env.ALLOW_REMOTE_ADMIN) {
   settings.adminHash = hash(pw, settings.adminSalt);
   saveSettings();
 }
-let jobs = readJSON(JOBS_FILE, []);
-const saveJobs = () => writeJSON(JOBS_FILE, jobs);
-const saveSettings = () => writeJSON(SETTINGS_FILE, settings);
 
 // ---------- sessions ----------
 const sessions = new Map(); // token -> expiry
