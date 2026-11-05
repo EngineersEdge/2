@@ -4,7 +4,7 @@
 1. Install Node.js LTS from nodejs.org
 2. Open this folder in a terminal and run:  npm install
 3. Start:  npm start
-4. Website: http://localhost:3000   Admin: http://localhost:3000/admin.html
+4. Website: (https://engineers-edge.onrender.com/)  Admin: (https://engineers-edge.onrender.com/admin.html)
    Default admin password: admin123  (change it on first login)
 
 ## Two printers
