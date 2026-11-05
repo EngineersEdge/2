@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engineer's Edge | Your Digital Service Partner</title>
+<meta name="description" content="Online forms, certificates, insurance, passport, PAN, GST, free PDF and image tools, and online printing.">
+<link rel="icon" type="image/png" href="brand/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top"><picture><source media="(prefers-color-scheme: dark)" srcset="brand/ee-mark-dark.png"><img src="brand/ee-mark-light.png" alt="" width="70" height="30" style="height:30px;width:auto;display:block"></picture><span>Engineer's Edge<small>Your Digital Service Partner</small></span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#tools">Free Tools</a>
+      <a href="#print">Print Online</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn wa" href="https://wa.me/919797975711" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>Forms, documents &amp; certificates,<br>done online for you.</h1>
+    <p>Government forms, ID services, insurance, passport, tax and business registration, plus free PDF and image tools you can use right here.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://wa.me/919797975711?text=Hello%20Engineer%27s%20Edge" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn" href="#tools">Use Free Tools</a>
+      <a class="btn" href="#print">Print Online</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="sec">
+  <div class="wrap">
+    <h2>Our Services</h2>
+    <input id="svcSearch" class="search" type="search" placeholder="Search a service, e.g. passport, PAN, GST...">
+    <div id="svcGrid" class="grid"></div>
+    <p class="note">Some services are assistance with government portals and documentation, not direct government-authorised issuance. Availability depends on the relevant department and applicable authorisations.</p>
+  </div>
+</section>
+
+<section id="tools" class="sec alt">
+  <div class="wrap">
+    <h2>Free Online Tools</h2>
+    <p class="sub">Everything runs inside your browser. Your files are not uploaded anywhere.</p>
+    <div class="tabs" id="toolTabs"></div>
+    <div id="toolPanel" class="panel"></div>
+  </div>
+</section>
+
+<section id="print" class="sec">
+  <div class="wrap narrow">
+    <h2>Print Online</h2>
+    <p class="sub">Upload a PDF, JPG or PNG. Choose Colour or Black &amp; White and it goes straight to the right printer.</p>
+    <form id="printForm" class="card form">
+      <div id="printClosed" class="warn" hidden>Printing is currently closed. Please try later or message us on WhatsApp.</div>
+      <label>Your name (optional)<input name="name" maxlength="60" autocomplete="name"></label>
+      <label>Mobile number (optional)<input name="phone" inputmode="tel" maxlength="15" autocomplete="tel"></label>
+      <label>File (PDF, JPG, PNG, max 30 MB)<input name="file" type="file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" required></label>
+      <div class="two">
+        <label>Print type
+          <select name="mode" id="pMode"><option value="bw">Black &amp; White</option><option value="color">Colour</option></select>
+        </label>
+        <label>Copies<input name="copies" type="number" min="1" max="100" value="1"></label>
+      </div>
+      <p class="muted" id="priceLine"></p>
+      <button class="btn primary" type="submit">Send to Printer</button>
+      <p id="printMsg" role="status"></p>
+    </form>
+    <form id="trackForm" class="inline">
+      <input id="trackId" placeholder="Job ID e.g. 3F9A12BC" maxlength="12">
+      <button class="btn" type="submit">Check status</button>
+      <span id="trackMsg"></span>
+    </form>
+    <p class="note">Word, Excel or PowerPoint files: convert to PDF first, or message us on WhatsApp.</p>
+  </div>
+</section>
+
+<section id="contact" class="sec alt">
+  <div class="wrap narrow">
+    <h2>Contact</h2>
+    <div class="card contact">
+      <p><strong>M/s ENGINEERS EDGE</strong><br>Online Internet Cyber Cafe</p>
+      <p>Proprietor: Er. Dhananjay Dogra</p>
+      <p>WhatsApp / Call: <a href="tel:+919797975711">9797975711</a> &middot; <a href="tel:+919103330653">9103330653</a></p>
+      <p>Email: <a href="mailto:engineersedge@gmail.com">engineersedge@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/engineersedge_cyber" target="_blank" rel="noopener">@engineersedge_cyber</a></p>
+      <p class="muted">Services are delivered online and over WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">&copy; <span id="yr"></span> Engineer's Edge &middot; <a href="admin.html">Admin</a></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="services.js"></script>
+<script src="tools.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
