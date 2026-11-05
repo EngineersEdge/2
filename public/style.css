@@ -57,3 +57,17 @@ footer{padding:24px 0;color:var(--mut);font-size:14px;border-top:1px solid var(-
 .switch{display:flex;align-items:center;gap:8px;font-weight:600;cursor:pointer}
 .login{max-width:340px;margin:12vh auto}.login .card{display:grid;gap:12px}.login input{padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--ink);font:inherit}
 .banner{background:#fff3cd;color:#664d03;padding:10px 14px;border-radius:9px;margin-bottom:12px}
+
+/* ---- home page additions ---- */
+.x-trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;padding:0;margin:22px 0 0;color:var(--mut);font-size:14px}
+.x-trust li:before{content:"\2713";color:var(--ok);margin-right:6px;font-weight:700}
+.x-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:18px;align-items:start}
+.x-cards h3,.x-steps h3{margin:0 0 6px;font-size:17px}.x-cards p,.x-steps p{margin:0;color:var(--mut);font-size:15px}
+.x-cards ul{margin:0;padding-left:18px;color:var(--mut);font-size:15px}.x-cards li{margin:3px 0}
+.x-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.x-n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--pri);color:#fff;font-weight:700;margin-bottom:8px}
+.x-faq{display:grid;gap:10px;margin-top:16px}.x-faq summary{cursor:pointer;font-weight:600}.x-faq p{margin:10px 0 0;color:var(--mut)}
+.x-band{margin-top:18px;text-align:center;border:1px solid var(--line);border-radius:12px;padding:24px 16px;background:var(--card)}
+.x-band h3{margin:0 0 4px;font-size:20px}.x-band p{margin:0 0 14px;color:var(--mut)}
+.x-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.x-fab{position:fixed;right:16px;bottom:16px;width:54px;height:54px;border-radius:50%;background:#1fa855;color:#fff;display:grid;place-items:center;font-size:26px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:10}
