@@ -119,7 +119,7 @@ async function runPrint(job) {
 // ---------- app ----------
 const app = express();
 app.set('trust proxy', 1); // behind Render's proxy: correct client IP for login rate-limit
-app.use(express.json({ limit: '1mb' }));
+app.use(express.json({ limit: '3mb' })); // 3 MB: govt-post backup imports can be large
 
 // Admin is only reachable from the shop laptop itself (http://localhost:3000/admin.html).
 // Requests coming through a tunnel (Cloudflare/ngrok add forwarding headers) are blocked.
@@ -131,12 +131,15 @@ const isLocalRequest = req => {
 };
 app.use((req, res, next) => {
   const p = req.path.toLowerCase();
-  const adminPath = p.startsWith('/api/admin') || p === '/admin.html' || p === '/admin.js';
+  const adminPath = p.startsWith('/api/admin') || ['/admin.html', '/admin.js', '/govt-admin.html', '/govt-admin.js'].includes(p);
   if (adminPath && !process.env.ALLOW_REMOTE_ADMIN && !isLocalRequest(req)) return res.status(404).send('Not found');
   next();
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+// government jobs / admit cards / results section (public pages + admin CRUD)
+require('./govt')(app, { requireAdmin, DATA });
 
 const ALLOWED = ['.pdf', '.jpg', '.jpeg', '.png'];
 const upload = multer({

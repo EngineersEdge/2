@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Govt Jobs Admin | Engineer's Edge</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="jobs.css">
+</head>
+<body>
+<div id="loginView" class="login" hidden>
+  <form class="card" id="loginForm">
+    <h1>Admin Login</h1>
+    <input type="password" id="pw" placeholder="Password" autocomplete="current-password" required>
+    <button class="btn primary" type="submit">Sign in</button>
+    <div id="loginMsg" class="bad"></div>
+  </form>
+</div>
+
+<div id="app" class="gadm" hidden>
+  <div class="row" style="justify-content:space-between">
+    <h1 style="margin:0;font-size:22px">Govt Jobs Admin</h1>
+    <span class="row" style="margin:0"><a class="btn sm" href="admin.html">Print admin</a><a class="btn sm" href="jobs.html" target="_blank">View site</a><button class="btn sm" id="logout">Sign out</button></span>
+  </div>
+
+  <div class="row">
+    <button class="btn primary" id="newBtn">+ New post</button>
+    <input id="listQ" type="search" placeholder="Search posts..." style="flex:1;min-width:160px;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit">
+    <a class="btn sm" href="/api/admin/govt-export">Download backup</a>
+    <label class="btn sm" style="cursor:pointer">Restore backup<input type="file" id="importFile" accept=".json,application/json" hidden></label>
+  </div>
+  <p class="hint">Tip: on Render's free plan the disk resets on every deploy. Download a backup after adding posts, or attach a persistent disk and set STORAGE_DIR.</p>
+
+  <div class="tbl-wrap card" style="padding:0;margin-bottom:20px">
+    <table class="tbl"><thead><tr><th>Date</th><th>Type</th><th>Title</th><th>Last date</th><th>Status</th><th></th></tr></thead><tbody id="list"></tbody></table>
+  </div>
+
+  <form id="pf" hidden>
+    <h2 id="formTitle" style="margin:0 0 12px">New post</h2>
+
+    <fieldset><legend>Basics</legend><div class="g">
+      <label>Type<select name="type" id="f_type"></select></label>
+      <label class="full">Title (shown on the site) *<input type="text" name="title" maxlength="220" required placeholder="e.g. Indian Bank 1500 Apprentices Online Form 2026"></label>
+      <label>Recruitment board / organisation<input type="text" name="board" maxlength="120" placeholder="e.g. Indian Bank"></label>
+      <label>Post / exam name<input type="text" name="postName" maxlength="220" placeholder="e.g. Apprentices"></label>
+      <label>Advertisement no.<input type="text" name="advtNo" maxlength="120"></label>
+      <label>Total vacancy<input type="text" name="vacancy" maxlength="40" placeholder="e.g. 1500"></label>
+      <label>State<select name="state" id="f_state"></select></label>
+      <label>Application mode<select name="appMode" id="f_mode"></select></label>
+      <label>Post date<input type="date" name="postDate"></label>
+    </div>
+    <div style="margin-top:12px"><b>Category</b> <span class="hint">(tick all that apply)</span><div class="checks" id="f_cats"></div></div>
+    <div style="margin-top:12px"><b>Qualification filter</b> <span class="hint">(used for "Jobs by qualification")</span><div class="checks" id="f_edu"></div></div>
+    <div class="g" style="margin-top:12px"><label class="full">Qualification (text shown in the table)<input type="text" name="qualificationText" maxlength="300" placeholder="e.g. Any Graduate"></label></div>
+    </fieldset>
+
+    <fieldset><legend>Dates, age &amp; salary</legend><div class="g">
+      <label>Application start date<input type="date" name="startDate"></label>
+      <label>Last date to apply<input type="date" name="lastDate"></label>
+      <label>Minimum age<input type="text" name="ageMin" maxlength="10"></label>
+      <label>Maximum age<input type="text" name="ageMax" maxlength="10"></label>
+      <label>Age calculated as on<input type="date" name="ageAsOn"></label>
+      <label>Salary / stipend<input type="text" name="salary" maxlength="150" placeholder="e.g. Rs 12,300 - 15,000 per month"></label>
+    </div></fieldset>
+
+    <fieldset><legend>Important dates table</legend><div class="rep" data-t="dates" data-cols="event:Event,date:Date (any text)"></div></fieldset>
+    <fieldset><legend>Application fee</legend><div class="rep" data-t="fees" data-cols="category:Category,fee:Fee"></div></fieldset>
+    <fieldset><legend>Age relaxation</legend><div class="rep" data-t="ageRelax" data-cols="category:Category,relaxation:Relaxation"></div></fieldset>
+    <fieldset><legend>Vacancy details</legend>
+      <b>Post-wise</b><div class="rep" data-t="postWise" data-cols="post:Post,vacancies:Vacancies,qualification:Qualification"></div>
+      <b style="display:block;margin-top:10px">Category-wise</b><div class="rep" data-t="categoryWise" data-cols="category:Category,vacancies:Vacancies"></div>
+      <b style="display:block;margin-top:10px">State-wise</b><div class="rep" data-t="stateWise" data-cols="state:State / UT,vacancies:Vacancies"></div>
+    </fieldset>
+
+    <fieldset><legend>Details</legend><div class="g">
+      <label class="full">Short info<textarea name="shortInfo" maxlength="1500" placeholder="2-3 line summary of the recruitment"></textarea></label>
+      <label class="full">Eligibility notes<textarea name="eligibilityNotes" maxlength="2000"></textarea></label>
+      <label class="full">Selection process <span class="hint">(one step per line or plain text)</span><textarea name="selection" maxlength="2000"></textarea></label>
+      <label class="full">How to apply <span class="hint">(one step per line)</span><textarea name="howToApply" maxlength="4000"></textarea></label>
+      <label class="full">Documents required <span class="hint">(one per line)</span><textarea name="documents" maxlength="2000"></textarea></label>
+    </div>
+    <b style="display:block;margin-top:12px">Exam pattern</b><div class="rep" data-t="examPattern" data-cols="subject:Subject,questions:Questions,marks:Marks"></div>
+    <b style="display:block;margin-top:12px">Photo / signature upload specs</b><div class="rep" data-t="uploadSpecs" data-cols="document:Document,dimensions:Dimensions,fileSize:File size"></div>
+    </fieldset>
+
+    <fieldset><legend>Links</legend><div class="g">
+      <label>Apply Online link<input type="url" name="applyUrl" placeholder="https://..."></label>
+      <label>Official notification (PDF) link<input type="url" name="notificationUrl" placeholder="https://..."></label>
+      <label>Official website<input type="text" name="officialWebsite" maxlength="200" placeholder="e.g. indianbank.bank.in"></label>
+    </div>
+    <b style="display:block;margin-top:12px">Other links</b><div class="rep" data-t="links" data-cols="label:Label,url:https://..."></div>
+    </fieldset>
+
+    <fieldset><legend>Publishing</legend><div class="checks">
+      <label><input type="checkbox" name="published" checked> Published (visible on the site)</label>
+      <label><input type="checkbox" name="featured"> Featured (star in lists)</label>
+    </div></fieldset>
+
+    <div class="sticky-save"><button class="btn primary" type="submit" id="saveBtn">Save post</button><button class="btn" type="button" id="cancelBtn">Cancel</button><span id="msg"></span></div>
+  </form>
+</div>
+<script src="govt-admin.js"></script>
+</body>
+</html>

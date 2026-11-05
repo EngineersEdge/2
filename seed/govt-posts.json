@@ -1,0 +1,100 @@
+[
+  {
+    "type": "job",
+    "title": "Indian Bank 1500 Apprentices Online Form 2026",
+    "board": "Indian Bank",
+    "postName": "Apprentices",
+    "state": "All India",
+    "cats": ["bank", "central"],
+    "edu": ["Any Graduate"],
+    "vacancy": "1500",
+    "qualificationText": "Any Graduate",
+    "appMode": "Online",
+    "postDate": "2026-11-04",
+    "startDate": "2026-11-05",
+    "lastDate": "2026-11-25",
+    "ageMin": "20",
+    "ageMax": "28",
+    "ageAsOn": "2026-11-01",
+    "salary": "Rs 12,300 - Rs 15,000 per month (stipend)",
+    "shortInfo": "Indian Bank has invited online applications for 1,500 apprentices for FY 2026-27 under the Apprentices Act, with 12 months of on-the-job training across India.",
+    "eligibilityNotes": "Graduate in any discipline, passed between 1 Apr 2022 and 1 Nov 2026.\nNot eligible: candidates who have already done an apprenticeship, or have one year or more of work experience after qualification.",
+    "selection": "Online written test (100 marks, 60 minutes), Local Language Proficiency Test, document verification and medical fitness.",
+    "howToApply": "Register on the NATS 2.0 portal and complete your profile\nSave your NATS Enrolment ID\nOpen the Apply Online link and register as a new user\nFill personal, graduation and category details\nChoose one State/UT and up to three districts\nUpload photo, signature, left thumb impression and handwritten declaration\nPreview, submit and pay the fee online\nSave a printout of the application",
+    "documents": "Graduation certificate and marksheets\nDate of birth and identity proof\nNATS Enrolment ID\nPhoto, signature, thumb impression, handwritten declaration\nCategory / PwBD certificate if applicable",
+    "applyUrl": "",
+    "officialWebsite": "indianbank.bank.in",
+    "featured": true,
+    "dates": [
+      {"event": "Application start", "date": "05-11-2026"},
+      {"event": "Last date to apply and pay fee", "date": "25-11-2026"},
+      {"event": "Age and qualification cut-off", "date": "01-11-2026"},
+      {"event": "Online exam date", "date": "To be announced"}
+    ],
+    "fees": [
+      {"category": "General / OBC / EWS", "fee": "Rs 800 + GST"},
+      {"category": "SC / ST / PwBD", "fee": "Rs 175 + GST"}
+    ],
+    "ageRelax": [
+      {"category": "SC / ST", "relaxation": "5 years"},
+      {"category": "OBC (Non-Creamy Layer)", "relaxation": "3 years"},
+      {"category": "PwBD", "relaxation": "10 years"}
+    ],
+    "categoryWise": [
+      {"category": "UR", "vacancies": "676"},
+      {"category": "OBC", "vacancies": "348"},
+      {"category": "SC", "vacancies": "252"},
+      {"category": "EWS", "vacancies": "142"},
+      {"category": "ST", "vacancies": "82"}
+    ],
+    "stateWise": [
+      {"state": "Uttar Pradesh", "vacancies": "285"},
+      {"state": "Tamil Nadu", "vacancies": "270"},
+      {"state": "West Bengal", "vacancies": "145"}
+    ],
+    "examPattern": [
+      {"subject": "Reasoning Aptitude", "questions": "15", "marks": "15"},
+      {"subject": "Computer Knowledge", "questions": "10", "marks": "10"},
+      {"subject": "English Language", "questions": "25", "marks": "25"},
+      {"subject": "Quantitative Aptitude", "questions": "25", "marks": "25"},
+      {"subject": "General Awareness (Banking)", "questions": "25", "marks": "25"}
+    ],
+    "uploadSpecs": [
+      {"document": "Photograph", "dimensions": "200 x 230 px", "fileSize": "20-50 KB"},
+      {"document": "Signature", "dimensions": "140 x 60 px", "fileSize": "10-20 KB"},
+      {"document": "Left thumb impression", "dimensions": "240 x 240 px", "fileSize": "20-50 KB"},
+      {"document": "Handwritten declaration", "dimensions": "800 x 400 px", "fileSize": "50-100 KB"}
+    ],
+    "links": [
+      {"label": "NATS 2.0 Registration", "url": "https://nats.education.gov.in"},
+      {"label": "Indian Bank Careers", "url": "https://www.indianbank.bank.in/en/career"}
+    ]
+  },
+  {
+    "type": "job", "title": "SBI GM, Chief AI Officer, DGM and More - 6 Posts", "board": "SBI", "postName": "GM & Chief AI Officer, DGM and More", "state": "All India",
+    "cats": ["bank", "central"], "edu": ["B.Tech/B.E", "Any Graduate", "MBA/PGDM"], "vacancy": "6", "qualificationText": "B.Tech/B.E, Any Graduate, MBA/PGDM",
+    "advtNo": "CRPD/SCO/2026-27/30", "postDate": "2026-11-04", "lastDate": "2026-11-16", "appMode": "Online"
+  },
+  {
+    "type": "job", "title": "SBI Risk Specialist - 3 Posts", "board": "SBI", "postName": "Risk Specialist", "state": "All India",
+    "cats": ["bank", "central"], "edu": ["CA/CMA", "MBA/PGDM"], "vacancy": "3", "qualificationText": "CA, MBA/PGDM",
+    "advtNo": "CRPD/SCO/2026-27/27", "postDate": "2026-11-03", "lastDate": "2026-11-23", "appMode": "Online"
+  },
+  {
+    "type": "job", "title": "City Union Bank Chief Compliance Officer - 1 Post", "board": "City Union Bank", "postName": "Chief Compliance Officer", "state": "All India",
+    "cats": ["bank"], "edu": ["Any Graduate"], "vacancy": "1", "qualificationText": "Graduate", "postDate": "2026-11-04", "appMode": "Online"
+  },
+  {
+    "type": "job", "title": "Nainital Bank HR Advisor - 1 Post", "board": "Nainital Bank", "postName": "HR Advisor", "state": "Uttarakhand",
+    "cats": ["bank", "state"], "edu": [], "vacancy": "1", "qualificationText": "Retired Staff", "postDate": "2026-11-02", "lastDate": "2026-11-07", "appMode": "Online"
+  },
+  {
+    "type": "admit-card", "title": "Union Bank of India GBO & SO Admit Card 2026", "board": "Union Bank of India", "postName": "GBO & SO", "cats": ["bank"], "postDate": "2026-10-24"
+  },
+  {
+    "type": "admit-card", "title": "IBPS SO Mains Admit Card 2026", "board": "IBPS", "postName": "SO", "cats": ["bank"], "postDate": "2026-10-22"
+  },
+  {
+    "type": "admit-card", "title": "SBI Clerk Backlog Mains Admit Card 2026", "board": "SBI", "postName": "Clerk", "cats": ["bank"], "postDate": "2026-10-20"
+  }
+]
