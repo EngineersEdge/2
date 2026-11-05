@@ -1,0 +1,72 @@
+/* Govt jobs section (extends style.css) */
+.jobs-hero{padding:40px 0 28px;background:linear-gradient(160deg,var(--alt),var(--bg))}
+.jobs-hero h1{font-size:clamp(26px,4.4vw,40px);margin:0 0 8px;line-height:1.15}
+.jobs-hero p{color:var(--mut);margin:0 0 16px;max-width:680px}
+.jsearch{display:flex;gap:8px;max-width:640px}
+.jsearch input{flex:1;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--ink);font:inherit}
+.ticker{background:var(--alt);border-bottom:1px solid var(--line);font-size:14px}
+.ticker .wrap{display:flex;gap:12px;align-items:center;padding-top:8px;padding-bottom:8px;overflow-x:auto;white-space:nowrap}
+.ticker b{color:var(--bad)}
+.ticker a{color:var(--ink);text-decoration:none}.ticker a:hover{color:var(--pri);text-decoration:underline}
+.left-chip{display:inline-block;background:#fbdcdc;color:#8a1a1f;border-radius:20px;padding:0 8px;font-size:12px;font-weight:700;margin-right:6px}
+.left-chip.ok{background:#d6f3e3;color:#0b5a33}
+@media(prefers-color-scheme:dark){.left-chip{background:#4a1d20;color:#ffb4b8}.left-chip.ok{background:#12382a;color:#8ee0b5}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 12px;border-radius:20px;font:inherit;font-size:13.5px;cursor:pointer}
+.chip:hover{border-color:var(--pri)}.chip.on{background:var(--pri);border-color:var(--pri);color:#fff}
+.chip small{opacity:.7;margin-left:4px}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:0 0 14px}
+.filters select{padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--ink);font:inherit;width:100%}
+.jtable-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.jtable{width:100%;border-collapse:collapse;font-size:14.5px;min-width:760px}
+.jtable th{background:var(--alt);text-align:left;padding:10px;border-bottom:1px solid var(--line);font-size:13px;white-space:nowrap}
+.jtable td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+.jtable tr:last-child td{border-bottom:0}
+.jtable tr:hover td{background:var(--alt)}
+.jtable .nw{white-space:nowrap}
+.pager{display:flex;gap:10px;align-items:center;justify-content:center;margin:16px 0}
+.star{color:var(--acc)}
+.empty{padding:28px;text-align:center;color:var(--mut)}
+.side-note{font-size:13px;color:var(--mut)}
+
+/* detail page */
+.crumbs{font-size:13px;color:var(--mut);margin:16px 0 6px}.crumbs a{color:var(--mut)}
+.jd h1{font-size:clamp(22px,3.6vw,32px);line-height:1.2;margin:0 0 8px}
+.meta{color:var(--mut);font-size:13.5px;margin:0 0 16px}
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:0 0 18px}
+.quick div{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:10px 12px}
+.quick span{display:block;font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.quick b{font-size:15px}
+.jd h2{font-size:20px;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--pri)}
+.kv,.dt{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kv th,.kv td,.dt th,.dt td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.kv th{width:36%;background:var(--alt);font-weight:600}
+.dt thead th{background:var(--alt);font-size:13px}
+.dt-wrap{overflow-x:auto}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.prose{white-space:pre-line;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.steps-ol{margin:0;padding-left:22px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px 14px 38px}
+.steps-ol li{margin:5px 0}
+.links-box a.btn{margin:4px 6px 4px 0}
+.cta-box{margin-top:26px;padding:18px;border:1px solid var(--pri);border-radius:12px;background:var(--alt)}
+.cta-box h3{margin:0 0 6px}
+.disclaimer{font-size:12.5px;color:var(--mut);margin-top:22px}
+@media(max-width:700px){.two-col{grid-template-columns:1fr}.kv th{width:42%}}
+@media print{.top,footer,.cta-box,.x-fab{display:none}}
+
+/* admin form */
+.gadm{max-width:1000px;margin:0 auto;padding:16px}
+.gadm fieldset{border:1px solid var(--line);border-radius:12px;margin:0 0 16px;padding:14px 16px;background:var(--card)}
+.gadm legend{font-weight:700;padding:0 8px}
+.gadm .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gadm label{display:grid;gap:4px;font-size:13.5px;font-weight:600}
+.gadm input[type=text],.gadm input[type=url],.gadm input[type=date],.gadm input[type=number],.gadm select,.gadm textarea{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.gadm textarea{min-height:90px;resize:vertical}
+.gadm .full{grid-column:1/-1}
+.checks{display:flex;flex-wrap:wrap;gap:6px 14px}
+.checks label{display:flex;align-items:center;gap:6px;font-weight:500}
+.rep{display:grid;gap:6px}
+.rep .r{display:grid;grid-template-columns:repeat(var(--n),1fr) auto;gap:6px}
+.rep .r input{min-width:0}
+.hint{font-weight:400;color:var(--mut);font-size:12.5px}
+.sticky-save{position:sticky;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:10px 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
