@@ -165,3 +165,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 }
 @media(max-width:560px){.two{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* logo (swaps with theme) */
+.mark{display:grid;place-items:center}
+.mark img{height:30px;width:auto;display:block}
+.flogo{display:inline-block;margin-bottom:8px}
+.flogo img{height:48px;width:auto;display:block}
+.lg-l{display:none}
+:root[data-theme=light] .lg-d{display:none}
+:root[data-theme=light] .lg-l{display:block}
