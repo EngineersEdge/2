@@ -10,7 +10,7 @@
     grid.innerHTML = SERVICES.map(([title, items]) => {
       const list = q ? items.filter(i => i.toLowerCase().includes(q) || title.toLowerCase().includes(q)) : items;
       if (!list.length) return '';
-      return `<details class="card svc" ${q ? 'open' : ''}><summary>${esc(title)} <span>${list.length}</span></summary><ul>${list.map(i => `<li><a href="https://wa.me/919797575711?text=${encodeURIComponent('Hello, I need help with: ' + i)}" target="_blank" rel="noopener">${esc(i)}</a></li>`).join('')}</ul></details>`;
+      return `<details class="card svc" ${q ? 'open' : ''}><summary>${esc(title)} <span>${list.length}</span></summary><ul>${list.map(i => `<li><a href="https://wa.me/919797975711?text=${encodeURIComponent('Hello, I need help with: ' + i)}" target="_blank" rel="noopener">${esc(i)}</a></li>`).join('')}</ul></details>`;
     }).join('') || '<p class="muted">No match. Message us on WhatsApp, we may still be able to help.</p>';
   }
   renderServices();

@@ -110,7 +110,7 @@
         for (let k = 0; k < 9; k++) { const m = (lo + hi) / 2, b = await toBlob(c, 'image/jpeg', m); if (b.size <= kb * 1024) { best = b; lo = m; } else hi = m; }
         dl(best, base(files[0].name) + `-${w}x${h}.jpg`); return `Saved ${w}x${h}px, ${fmtKB(best.size)}. Image is stretched to the exact size; crop first if the face looks wrong.`;
       } },
-    { id: 'qr', title: 'QR Code', desc: 'Create a QR code for a link, UPI ID, WhatsApp number or text.', files: null, opts: [{ k: 'text', label: 'Text or link', type: 'text', value: 'https://wa.me/919797575711' }],
+    { id: 'qr', title: 'QR Code', desc: 'Create a QR code for a link, UPI ID, WhatsApp number or text.', files: null, opts: [{ k: 'text', label: 'Text or link', type: 'text', value: 'https://wa.me/919797975711' }],
       async run(files, o, log, out) {
         if (!o.text.trim()) throw new Error('Enter some text.'); if (!window.QRCode) throw new Error('QR library did not load. Check internet.');
         out.innerHTML = ''; const box = document.createElement('div'); box.style.cssText = 'background:#fff;padding:14px;display:inline-block;border-radius:8px'; out.appendChild(box);
