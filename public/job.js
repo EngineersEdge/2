@@ -76,7 +76,7 @@
       <div class="share" aria-label="Share this post">
         <b>Share this post</b>
         <div class="share-btns">
-          <a class="btn sm wa" href="${esc(shareLinks.whatsapp)}" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn sm wa" id="waShare" href="${esc(shareLinks.whatsapp)}" target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn sm" href="${esc(shareLinks.telegram)}" target="_blank" rel="noopener">Telegram</a>
           <a class="btn sm" href="${esc(shareLinks.facebook)}" target="_blank" rel="noopener">Facebook</a>
           <a class="btn sm" href="${esc(shareLinks.email)}">Email</a>
@@ -103,6 +103,9 @@
       fetch(p.poster).then(r => r.blob()).then(blob => {
         const file = new File([blob], p.poster.split('/').pop(), { type: blob.type || 'image/jpeg' });
         if (!navigator.canShare({ files: [file] })) return;
+        // WhatsApp button: send the poster image with the link (phones); otherwise the plain link opens
+        const wa = document.getElementById('waShare');
+        if (wa) wa.onclick = e => { e.preventDefault(); navigator.share({ files: [file], title: p.title, text: shareText + '\n' + pageUrl }).catch(() => {}); };
         const b = document.getElementById('shareImg');
         b.hidden = false;
         b.onclick = () => navigator.share({ files: [file], title: p.title, text: shareText + '\n' + pageUrl }).catch(() => {});
