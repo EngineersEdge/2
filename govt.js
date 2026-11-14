@@ -117,6 +117,23 @@ module.exports = function mountGovt(app, { requireAdmin, DATA }) {
     if (posts.some(p => p.id === s.id)) continue;
     try { const now = stamp(); posts.push({ id: String(s.id), ...sanitizePost(s), createdAt: now, updatedAt: now }); } catch { /* skip bad seed row */ }
   }
+  // Poster links for posts already on the site, matched by exact title (seed/posters.json). Applied once each.
+  const POSTERS = read(path.join(__dirname, 'seed', 'posters.json')) || {};
+  for (const [title, poster] of Object.entries(POSTERS)) {
+    const key = 'poster:' + title;
+    if (applied.has(key)) continue;
+    applied.add(key); changed = true;
+    const p = posts.find(x => x.title === title && !x.poster);
+    if (p && /^posters\/[a-z0-9._-]+\.(jpe?g|png|webp)$/i.test(poster)) { p.poster = poster; p.updatedAt = stamp(); }
+  }
+  // Posts removed from the site, matched by exact title (seed/removed.json). Applied once each.
+  const REMOVED = read(path.join(__dirname, 'seed', 'removed.json')) || [];
+  for (const title of REMOVED) {
+    const key = 'removed:' + title;
+    if (applied.has(key)) continue;
+    applied.add(key); changed = true;
+    posts = posts.filter(x => x.title !== title);
+  }
   if (changed) { save(); fs.writeFileSync(APPLIED, JSON.stringify([...applied])); }
 
   const byNewest = (a, b) => (b.postDate || '').localeCompare(a.postDate || '') || b.createdAt.localeCompare(a.createdAt);
