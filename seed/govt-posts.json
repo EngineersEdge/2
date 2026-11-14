@@ -1,5 +1,217 @@
 [
   {
+    "id": "gmc-jammu-pts-1-2026",
+    "type": "job",
+    "title": "GMC Jammu Recruitment 2026 - Project Technical Support-I (ICMR Project)",
+    "board": "Government Medical College (GMC), Jammu",
+    "postName": "Project Technical Support-I (PTS-I)",
+    "advtNo": "Advt. No. GMCJ/Project/1487 dated 11-11-2026",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "state",
+      "medical"
+    ],
+    "edu": [
+      "B.Sc",
+      "Post Graduate",
+      "Medical/Nursing"
+    ],
+    "vacancy": "1",
+    "qualificationText": "B.Sc / M.Sc in Radiography, MIT, MRIT or equivalent. Bachelor's route needs 1 year of experience; Master's route needs none.",
+    "appMode": "Email / Post",
+    "postDate": "2026-11-11",
+    "startDate": "",
+    "lastDate": "2026-11-23",
+    "ageMin": "",
+    "ageMax": "30",
+    "ageAsOn": "",
+    "salary": "Rs 18,000 + 20% HRA = Rs 21,600 per month (Year 1 and 2)",
+    "shortInfo": "GMC Jammu has invited applications for 1 temporary post of Project Technical Support-I under the ICMR-funded PRECISION-HPB project in the Department of Radio Diagnosis (Principal Investigator: Dr. Rajesh Sharma). The last date is 23 November 2026 up to 4:00 PM. Only residents of J&K can apply.",
+    "eligibilityNotes": "Bachelor's route: B.Sc. Radiography, BMRIT, B.Sc. MIT, B.Sc. (RT), BRIT or recognised equivalent in medical radiology / imaging technology, with at least 1 year of relevant work experience.\nMaster's route: M.Sc. Radiography, M.Sc. MRIT, M.Sc. MIT, MRIT or recognised equivalent. No post-bachelor experience needed.\nDesirable: experience with medical imaging data, CT/MRI datasets, DICOM, clinical or biomedical research, MS Excel, and AI/ML in medical imaging.\nMaximum age is 30 years, counted as on the last date of application.\nCandidates must be residents of the UT of J&K.\nThe post is temporary and project-based, initially for one year. Extension depends on performance, project needs and funds. No right to regularisation.\nSelected candidates must report within 7 days with original documents, sign a contract agreement and give an affidavit before a 1st Class Magistrate. One month's notice is needed to resign.",
+    "selection": "No written test or walk-in. If more than 10 eligible applications are received, candidates are shortlisted on academic performance, research and public health experience.\nShortlisted candidates are called for an interview and final selection is based on interview scores.\nThe interview date will be announced on the GMC Jammu website. No TA/DA is paid for attending.",
+    "howToApply": "Download the advertisement and application form from the GMC Jammu website (gmcjammu.nic.in)\nFill in the form completely and attach self-attested copies of all documents\nAffix one passport photograph attested by a Gazetted Officer and attach one extra photograph\nSubmit by hand at the Office of the Principal, GMC Jammu, or email scanned copies to the address given in the notification\nLast date: 23 November 2026, up to 4:00 PM (next working day if it falls on a holiday)\nApplications with missing documents will be rejected. Phone: 0191-2584247",
+    "documents": "Educational qualification certificates and mark sheets\nDomicile certificate\nExperience certificate from a competent authority\nMatriculation or date-of-birth certificate\nUpdated CV / resume\nTwo passport-size photographs (one attested by a Gazetted Officer)\nNOC or application through proper channel, if applicable",
+    "applyUrl": "https://gmcjammu.nic.in",
+    "notificationUrl": "https://jkadworld.com/wp-content/uploads/2026/11/adv-12.pdf",
+    "officialWebsite": "gmcjammu.nic.in",
+    "poster": "posters/gmc-jammu-pts-1-2026.jpg",
+    "featured": false,
+    "dates": [
+      {
+        "event": "Advertisement date",
+        "date": "11-11-2026"
+      },
+      {
+        "event": "Last date to apply (up to 4:00 PM)",
+        "date": "23-11-2026"
+      },
+      {
+        "event": "Interview date",
+        "date": "To be announced on website"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Project Technical Support-I (PTS-I)",
+        "vacancies": "1",
+        "qualification": "B.Sc / M.Sc Radiography, MIT, MRIT or equivalent"
+      }
+    ],
+    "links": [
+      {
+        "label": "GMC Jammu Official Website",
+        "url": "https://gmcjammu.nic.in"
+      },
+      {
+        "label": "Official Notification (PDF)",
+        "url": "https://jkadworld.com/wp-content/uploads/2026/11/adv-12.pdf"
+      }
+    ]
+  },
+  {
+    "id": "jkssb-je-mechanical-2026",
+    "type": "job",
+    "title": "JKSSB Junior Engineer (Mechanical) Recruitment 2026 - 127 Posts (PWD R&B)",
+    "board": "JKSSB (Jammu & Kashmir Services Selection Board)",
+    "postName": "Junior Engineer (Mechanical)",
+    "advtNo": "Advt. Notification No. 10 of 2026 (Item No. 265)",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "state",
+      "engineering"
+    ],
+    "edu": [
+      "Diploma",
+      "B.Tech/B.E"
+    ],
+    "vacancy": "127",
+    "qualificationText": "3-year Diploma in Mechanical Engineering, or Degree in Mechanical Engineering, or AMIE Section A & B",
+    "appMode": "Online",
+    "postDate": "2026-10-21",
+    "startDate": "2026-11-16",
+    "lastDate": "2026-12-15",
+    "ageMin": "18",
+    "ageMax": "40",
+    "ageAsOn": "2026-01-01",
+    "salary": "Pay Level-6: Rs 35,400 - Rs 1,12,400 per month plus allowances",
+    "shortInfo": "JKSSB has invited online applications for 127 Junior Engineer (Mechanical) posts in the Public Works (R&B) Department, UT Cadre (Item No. 265), under Advertisement No. 10 of 2026. Applications run from 16 November to 15 December 2026. Selection is by an objective OMR-based written test followed by document verification. Only J&K domicile holders can apply.",
+    "eligibilityNotes": "Must be a domicile of the UT of J&K with a valid Domicile Certificate issued on or before 15.12.2026.\nQualification (any one): 3-year Diploma in Mechanical Engineering from a government-recognised institute, Degree in Mechanical Engineering from an Indian university, or AMIE Section A & B (India). It must be obtained on or before 15.12.2026.\nAge is counted as on 01.01.2026. Minimum 18 years. Upper limit: 40 years (OM), 43 years (SC, ST-1, ST-2, OBC, RBA, ALC/IB, EWS), 42 years (PwBD).\nEx-Servicemen: period of military service is deducted from actual age, within the 3-year tolerance of the notification.\nVacancies may change before selection ends, and the recruitment is subject to a pending court case.",
+    "selection": "Objective-type (MCQ) written / OMR examination, English only. Negative marking: one-fourth of the marks for each wrong answer.\nMerit is based on the written examination only, followed by document verification. No interview.\nExam date, admit card and syllabus will be announced separately by JKSSB.",
+    "howToApply": "Visit www.jkssb.nic.in and open the link for Notification No. 10 of 2026, Item No. 265\nEnter name, date of birth and parents' names exactly as in the Matriculation Certificate\nFill in category, qualification and any ESM, PwBD or in-service details\nUpload live photograph and signature (10 KB to 20 KB each) and PDFs (up to 200 KB) as required\nPay the fee online (Net Banking, Credit Card or Debit Card)\nSubmit, note the application number and save a printout. Do not send hard copies to the Board",
+    "documents": "Printout of the submitted application\nOriginals and self-attested copies of Matriculation, qualification, Domicile and category certificates\nTwo recent passport-size photographs (not older than 6 months) and original photo ID\nBonafide Certificate if the degree is from a non-Central university outside J&K\nEx-Servicemen: Form-XIV and affidavit before a 1st Class Judicial Magistrate\nIn-service candidates: signed and stamped certificate through the Head of Department",
+    "applyUrl": "https://www.jkssb.nic.in",
+    "notificationUrl": "https://www.jkssb.nic.in",
+    "officialWebsite": "www.jkssb.nic.in",
+    "poster": "posters/jkssb-je-mechanical-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Notification release (Advt. 10 of 2026)",
+        "date": "21-10-2026"
+      },
+      {
+        "event": "Online application start",
+        "date": "16-11-2026"
+      },
+      {
+        "event": "Last date to apply",
+        "date": "15-12-2026"
+      },
+      {
+        "event": "Written test date",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "General / OM / OBC / RBA / ALC-IB",
+        "fee": "Rs 600"
+      },
+      {
+        "category": "SC / ST-1 / ST-2 / EWS / PwBD",
+        "fee": "Rs 500"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "SC / ST-1 / ST-2 / OBC / RBA / ALC-IB / EWS",
+        "relaxation": "Max age 43 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "Max age 42 years"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service deducted from age, within 3-year tolerance"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Junior Engineer (Mechanical) - PWD (R&B) Department (Item 265)",
+        "vacancies": "127",
+        "qualification": "Diploma / Degree / AMIE (Mechanical)"
+      }
+    ],
+    "categoryWise": [
+      {
+        "category": "Open Merit (OM)",
+        "vacancies": "51"
+      },
+      {
+        "category": "Scheduled Castes (SC)",
+        "vacancies": "10"
+      },
+      {
+        "category": "Scheduled Tribes (ST-1)",
+        "vacancies": "13"
+      },
+      {
+        "category": "Scheduled Tribes (ST-2)",
+        "vacancies": "13"
+      },
+      {
+        "category": "Other Backward Classes (OBC)",
+        "vacancies": "10"
+      },
+      {
+        "category": "ALC / IB (near LoC / International Border)",
+        "vacancies": "5"
+      },
+      {
+        "category": "Residents of Backward Areas (RBA)",
+        "vacancies": "13"
+      },
+      {
+        "category": "Economically Weaker Sections (EWS)",
+        "vacancies": "12"
+      }
+    ],
+    "uploadSpecs": [
+      {
+        "document": "Live photograph",
+        "dimensions": "-",
+        "fileSize": "10 KB to 20 KB"
+      },
+      {
+        "document": "Signature",
+        "dimensions": "-",
+        "fileSize": "10 KB to 20 KB"
+      },
+      {
+        "document": "Certificates (PDF)",
+        "dimensions": "-",
+        "fileSize": "Max 200 KB"
+      }
+    ],
+    "links": [
+      {
+        "label": "JKSSB Official Website",
+        "url": "https://www.jkssb.nic.in"
+      }
+    ]
+  },
+  {
     "id": "jkssb-je-civil-2026",
     "type": "job",
     "title": "JKSSB Junior Engineer (Civil) Recruitment 2026 - 458 Posts (Jal Shakti & PWD R&B)",
