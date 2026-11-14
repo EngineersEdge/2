@@ -1,12 +1,561 @@
 [
   {
+    "id": "jkssb-mts-class-iv-2026",
+    "type": "job",
+    "title": "JKSSB MTS / Class-IV & Sanitation Worker Recruitment 2026 - 2863 Posts",
+    "board": "JKSSB (Jammu & Kashmir Services Selection Board)",
+    "postName": "Class-IV (MTS) & Sanitation Worker",
+    "advtNo": "Advt. No. 09 of 2026",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "state"
+    ],
+    "edu": [
+      "8th",
+      "10th",
+      "12th"
+    ],
+    "vacancy": "2863",
+    "qualificationText": "MTS: Matric (10th) to 10+2. Sanitation Worker: 8th Pass to 10+2",
+    "appMode": "Online",
+    "postDate": "2026-09-01",
+    "startDate": "2026-10-14",
+    "lastDate": "2026-11-27",
+    "ageMin": "18",
+    "ageMax": "40",
+    "ageAsOn": "2026-01-01",
+    "salary": "Pay Level SL1: Rs 14,800 - Rs 47,100 per month",
+    "shortInfo": "JKSSB has invited online applications for 2,863 Class-IV (MTS) and Sanitation Worker posts across UT, Divisional and District cadres under Advertisement No. 09 of 2026. The last date has been extended to 27 November 2026. Only J&K domicile holders can apply.",
+    "eligibilityNotes": "Must be a Domicile holder of the Union Territory of J&K with a valid Domicile Certificate on or before the cut-off date.\nQualification must match the post: MTS needs Matric (10th) to 10+2; Sanitation Worker needs 8th Pass to 10+2. Other qualifications are not eligible.\nAge is counted as on 01.01.2026. Upper limit: 40 years (OM), 43 years (SC, ST-1, ST-2, OBC, RBA, ALC/IB, EWS), 42 years (PwBD).\nOnly one application per item number is allowed. Multiple applications for the same item number lead to cancellation.",
+    "selection": "Objective type written test (MCQ, English only). Negative marking: one-fourth of the marks of each wrong answer is deducted.\nFinal merit = written test marks + additional weightage, then document verification.\nUT Cadre: written 85 + no family member in govt service 5 + widow/divorced/orphan girl 5 + casual worker (5+ years) 5 = 100.\nDivisional Cadre: written 80 + home division 5 + the three 5-mark claims = 100.\nDistrict Cadre: written 75 + home district 10 + the three 5-mark claims = 100.\nCadre and department are allocated on merit-cum-preference basis.",
+    "howToApply": "Visit www.jkssb.nic.in once the application window opens\nRegister or log in on the online portal\nFill in personal, educational and category details carefully\nUpload live photograph and signature (10 KB to 20 KB each)\nPay the fee online (Net Banking, Credit Card or Debit Card)\nReview everything, then submit. No corrections are allowed after submission\nSave and print the application for document verification",
+    "documents": "Original and self-attested copies of the online application and all certificates\nValid Domicile Certificate (J&K)\nEducational certificates (Matric / 8th / 10+2 as applicable)\nCategory / reservation certificate, if applicable\nTwo recent passport-size colour photographs (not older than 6 months) and a valid photo ID\nWeightage certificates (no government family member, widow/divorced/orphan, or casual-worker status), if claimed",
+    "applyUrl": "https://www.jkssb.nic.in",
+    "officialWebsite": "www.jkssb.nic.in",
+    "poster": "posters/jkssb-class-iv-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Notification release (Advt. 09 of 2026)",
+        "date": "01-09-2026"
+      },
+      {
+        "event": "Online application start",
+        "date": "14-10-2026"
+      },
+      {
+        "event": "Last date to apply (extended)",
+        "date": "27-11-2026"
+      },
+      {
+        "event": "Written test date",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "General / OM / OBC / RBA / ALC-IB",
+        "fee": "Rs 600"
+      },
+      {
+        "category": "SC / ST-1 / ST-2 / EWS / PwBD",
+        "fee": "Rs 500"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "SC / ST / OBC / RBA / ALC-IB / EWS",
+        "relaxation": "Max age 43 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "Max age 42 years"
+      },
+      {
+        "category": "Casual workers (J&K Special Recruitment Rules 2020)",
+        "relaxation": "+5 years on upper limit"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service deducted from age; allowed up to 3 years above the limit"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "UT Cadre",
+        "vacancies": "105",
+        "qualification": "MTS / Sanitation Worker"
+      },
+      {
+        "post": "Divisional Cadre - Jammu",
+        "vacancies": "1093",
+        "qualification": "MTS / Sanitation Worker"
+      },
+      {
+        "post": "Divisional Cadre - Kashmir",
+        "vacancies": "897",
+        "qualification": "MTS / Sanitation Worker"
+      },
+      {
+        "post": "District Cadre (all 20 districts)",
+        "vacancies": "768",
+        "qualification": "MTS / Sanitation Worker"
+      }
+    ],
+    "categoryWise": [
+      {
+        "category": "Open Merit (OM)",
+        "vacancies": "1178"
+      },
+      {
+        "category": "Scheduled Castes (SC)",
+        "vacancies": "246"
+      },
+      {
+        "category": "Scheduled Tribes (ST-1)",
+        "vacancies": "293"
+      },
+      {
+        "category": "Scheduled Tribes (ST-2)",
+        "vacancies": "286"
+      },
+      {
+        "category": "Other Backward Classes (OBC)",
+        "vacancies": "221"
+      },
+      {
+        "category": "ALC / IB (near LoC / International Border)",
+        "vacancies": "115"
+      },
+      {
+        "category": "Residents of Backward Areas (RBA)",
+        "vacancies": "271"
+      },
+      {
+        "category": "Economically Weaker Sections (EWS)",
+        "vacancies": "253"
+      }
+    ],
+    "stateWise": [
+      {
+        "state": "Anantnag",
+        "vacancies": "59"
+      },
+      {
+        "state": "Bandipora",
+        "vacancies": "20"
+      },
+      {
+        "state": "Baramulla",
+        "vacancies": "75"
+      },
+      {
+        "state": "Budgam",
+        "vacancies": "47"
+      },
+      {
+        "state": "Doda",
+        "vacancies": "46"
+      },
+      {
+        "state": "Ganderbal",
+        "vacancies": "46"
+      },
+      {
+        "state": "Jammu",
+        "vacancies": "65"
+      },
+      {
+        "state": "Kathua",
+        "vacancies": "50"
+      },
+      {
+        "state": "Kishtwar",
+        "vacancies": "25"
+      },
+      {
+        "state": "Kulgam",
+        "vacancies": "23"
+      },
+      {
+        "state": "Kupwara",
+        "vacancies": "24"
+      },
+      {
+        "state": "Poonch",
+        "vacancies": "49"
+      },
+      {
+        "state": "Pulwama",
+        "vacancies": "45"
+      },
+      {
+        "state": "Rajouri",
+        "vacancies": "28"
+      },
+      {
+        "state": "Ramban",
+        "vacancies": "9"
+      },
+      {
+        "state": "Reasi",
+        "vacancies": "34"
+      },
+      {
+        "state": "Samba",
+        "vacancies": "14"
+      },
+      {
+        "state": "Shopian",
+        "vacancies": "10"
+      },
+      {
+        "state": "Srinagar",
+        "vacancies": "53"
+      },
+      {
+        "state": "Udhampur",
+        "vacancies": "46"
+      }
+    ],
+    "uploadSpecs": [
+      {
+        "document": "Live photograph",
+        "dimensions": "As per notification",
+        "fileSize": "10 - 20 KB"
+      },
+      {
+        "document": "Signature",
+        "dimensions": "As per notification",
+        "fileSize": "10 - 20 KB"
+      }
+    ],
+    "links": [
+      {
+        "label": "JKSSB Official Website",
+        "url": "https://www.jkssb.nic.in"
+      }
+    ]
+  },
+  {
+    "id": "jk-bank-ba-po-2026",
+    "type": "job",
+    "title": "J&K Bank Recruitment 2026 - 1053 Banking Associate & Probationary Officer Posts",
+    "board": "Jammu & Kashmir Bank Ltd. (J&K Bank)",
+    "postName": "Banking Associate & Probationary Officer",
+    "advtNo": "JKB/HR/Rectt/2026-493 & 494",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "bank"
+    ],
+    "edu": [
+      "Any Graduate"
+    ],
+    "vacancy": "1053",
+    "qualificationText": "Graduation in any discipline (degree or marksheet needed by 26-11-2026)",
+    "appMode": "Online",
+    "postDate": "2026-11-07",
+    "startDate": "2026-11-07",
+    "lastDate": "2026-11-26",
+    "ageMin": "20",
+    "ageMax": "30",
+    "ageAsOn": "2026-01-01",
+    "salary": "BA: Rs 24,050 basic. PO: Rs 48,480 basic",
+    "shortInfo": "J&K Bank has released two notifications for 1,053 posts: 1,033 Banking Associate posts (J&K UT domicile) and 20 Probationary Officer posts (Ladakh UT domicile). Both use the same application and fee window, which closes on 26 November 2026.",
+    "eligibilityNotes": "Banking Associate: J&K UT domicile with a valid domicile certificate.\nProbationary Officer: Ladakh UT domicile.\nBachelor's degree in any discipline from a recognised university. Final-year students who will not finish by 26-11-2026 are not eligible. CGPA/OGPA must be converted to a percentage as per the university formula.\nAge: 20 to 30 years as on 01.01.2026, before relaxation.\nBanking Associate reservation: SC 8%, ST 10% (existing) + 10% (newly added), OBC 8%, ALC/IB 4%, RBA 10%, EWS 10%, Ex-Servicemen 6% and PwBD 4% (horizontal).\nProbationary Officer (Ladakh) reservation: SC 1%, ST 80%, residents of areas adjoining ALC 4%, EWS 10%, PwBD 4% (horizontal).\nA category certificate is needed at online registration if you claim reservation.",
+    "selection": "Banking Associate: one online exam conducted by IBPS (100 questions, 100 marks, 60 minutes, English, negative marking 1/4), then provisional selection and document verification. No interview. Minimum qualifying marks: 40% (General) and 35% (reserved). Former J&K Bank apprentices with J&K domicile get 2.5 extra marks.\nProbationary Officer: Preliminary online exam, Main exam (objective + descriptive essay/comprehension), then a 100-mark interview. Final merit = 80% Main + 20% Interview. Preliminary marks are used only for shortlisting.",
+    "howToApply": "Visit the official website jkb.bank.in (Careers section) from 7 November 2026\nRegister and log in\nFill in the online form, including graduation percentage\nUpload photograph, signature and other documents as asked\nPay the fee online (Debit / Credit Card, Net Banking, IMPS or wallet)\nSubmit the application and save a printout",
+    "documents": "Graduation degree certificate or marksheet (valid by 26-11-2026)\nValid domicile certificate: J&K UT for Banking Associate, Ladakh UT for Probationary Officer\nCategory certificate, if claiming reservation (needed at registration)\nPhoto ID proof and a recent photograph and signature",
+    "applyUrl": "https://jkb.bank.in",
+    "officialWebsite": "jkb.bank.in",
+    "poster": "posters/jk-bank-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Online application start",
+        "date": "07-11-2026"
+      },
+      {
+        "event": "Last date to apply",
+        "date": "26-11-2026"
+      },
+      {
+        "event": "Last date for fee payment",
+        "date": "26-11-2026"
+      },
+      {
+        "event": "Banking Associate exam date",
+        "date": "To be announced"
+      },
+      {
+        "event": "PO preliminary / main / interview dates",
+        "date": "To be announced"
+      },
+      {
+        "event": "Call letter release",
+        "date": "To be notified separately"
+      }
+    ],
+    "fees": [
+      {
+        "category": "Banking Associate: SC / ST / SEBC / PwBD / Ex-Servicemen",
+        "fee": "Rs 600 + GST"
+      },
+      {
+        "category": "Banking Associate: All other candidates",
+        "fee": "Rs 800 + GST"
+      },
+      {
+        "category": "Probationary Officer: SC / ST / SEBC / PwBD",
+        "fee": "Rs 1,000 + GST"
+      },
+      {
+        "category": "Probationary Officer: All other candidates",
+        "fee": "Rs 1,200 + GST"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "SC / ST",
+        "relaxation": "5 years"
+      },
+      {
+        "category": "OBC / ALC-IB / RBA",
+        "relaxation": "3 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "10 years"
+      },
+      {
+        "category": "EWS",
+        "relaxation": "No extra age relaxation"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service + 3 years (max age 48)"
+      },
+      {
+        "category": "Former J&K Bank apprentices (completed training, J&K domicile)",
+        "relaxation": "+1 year"
+      },
+      {
+        "category": "Ladakh PO: SC / ST / ALC candidates",
+        "relaxation": "5 years, plus a one-time extra 5 years for 2025-26 recruitments (max age 56)"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Banking Associate (J&K UT domicile)",
+        "vacancies": "1033",
+        "qualification": "Graduation in any discipline"
+      },
+      {
+        "post": "Probationary Officer (Ladakh UT domicile)",
+        "vacancies": "20",
+        "qualification": "Graduation in any discipline"
+      }
+    ],
+    "examPattern": [
+      {
+        "subject": "Banking Associate: English Language",
+        "questions": "30",
+        "marks": "30"
+      },
+      {
+        "subject": "Banking Associate: Quantitative Aptitude",
+        "questions": "35",
+        "marks": "30"
+      },
+      {
+        "subject": "Banking Associate: Reasoning Ability",
+        "questions": "35",
+        "marks": "40"
+      },
+      {
+        "subject": "Banking Associate: Total (60 minutes)",
+        "questions": "100",
+        "marks": "100"
+      },
+      {
+        "subject": "PO Main: Reasoning",
+        "questions": "40",
+        "marks": "60"
+      },
+      {
+        "subject": "PO Main: General / Economy / Banking / Digital & Financial Awareness (incl. RBI)",
+        "questions": "50",
+        "marks": "60"
+      },
+      {
+        "subject": "PO Main: English Language",
+        "questions": "40",
+        "marks": "20"
+      },
+      {
+        "subject": "PO Main: Data Analysis & Interpretation",
+        "questions": "40",
+        "marks": "60"
+      },
+      {
+        "subject": "PO Main: Descriptive (Essay & Comprehension)",
+        "questions": "2",
+        "marks": "25"
+      },
+      {
+        "subject": "PO Interview",
+        "questions": "-",
+        "marks": "100"
+      }
+    ],
+    "links": [
+      {
+        "label": "J&K Bank Careers (jkb.bank.in)",
+        "url": "https://jkb.bank.in"
+      }
+    ]
+  },
+  {
+    "id": "rrb-station-master-2026",
+    "type": "job",
+    "title": "RRB Station Master Recruitment 2026 - 1265 Posts (CEN 08/2026)",
+    "board": "Railway Recruitment Boards (RRB)",
+    "postName": "Station Master",
+    "advtNo": "CEN 08/2026",
+    "state": "All India",
+    "cats": [
+      "railway",
+      "central"
+    ],
+    "edu": [
+      "Any Graduate"
+    ],
+    "vacancy": "1265",
+    "qualificationText": "Bachelor's Degree from a recognised university (must be completed by 25-11-2026)",
+    "appMode": "Online",
+    "postDate": "2026-10-26",
+    "startDate": "2026-10-27",
+    "lastDate": "2026-11-25",
+    "ageMin": "20",
+    "ageMax": "33",
+    "ageAsOn": "2027-01-01",
+    "salary": "Rs 35,400 per month basic (Level 6, 7th CPC)",
+    "shortInfo": "Indian Railways, through the Railway Recruitment Boards, has opened online applications for 1,265 Station Master posts under CEN 08/2026. Vacancies were corrected from 1,215 to 1,265 by Corrigendum No. 1 dated 27-10-2026. Apply at rrbapply.gov.in by 25 November 2026 (11:59 PM). You can apply to only one RRB.",
+    "eligibilityNotes": "Bachelor's Degree or equivalent from a recognised university, completed by 25-11-2026. Candidates awaiting final results are not eligible.\nAge: 20 to 33 years as on 01-01-2027. Relaxation: OBC-NCL 3 years, SC/ST 5 years, and other government rules.\nMust meet the A-2 medical standard for Station Master.\nCandidates must apply to only one RRB. Multiple applications may lead to rejection.",
+    "selection": "Computer Based Test (CBT): 100 questions, 100 marks, 120 minutes. Negative marking: 1/3 mark per wrong answer.\nCBT sections: Basic Science, Mathematical & Analytical Capability (60 Q), Logical Capability (20 Q), Mental Reasoning (20 Q).\nThen Computer Based Aptitude Test (CBAT), document verification and medical examination.\nFinal merit: 70% CBT + 30% CBAT.",
+    "howToApply": "Visit rrbapply.gov.in\nClick Create an Account (new) or Already Have an Account (login)\nComplete account verification and enter personal details\nFill in educational qualification and category details\nSelect the Railway Recruitment Board and your preferences carefully\nUpload live photograph, signature and documents as the portal asks\nReview all details and submit\nPay the exam fee online\nDownload and print the application form",
+    "documents": "Live photograph and signature, as per portal instructions\nBachelor's degree / marksheets\nCategory or concession certificate, if claimed\nRegistered mobile number and email ID for login and OTP",
+    "applyUrl": "https://rrbapply.gov.in",
+    "officialWebsite": "rrb.indianrailways.gov.in",
+    "poster": "posters/rrb-station-master-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Detailed notification",
+        "date": "26-10-2026"
+      },
+      {
+        "event": "Online application start",
+        "date": "27-10-2026"
+      },
+      {
+        "event": "Last date to apply (11:59 PM)",
+        "date": "25-11-2026"
+      },
+      {
+        "event": "Last date for fee payment",
+        "date": "27-11-2026"
+      },
+      {
+        "event": "Application correction window",
+        "date": "28-11-2026 to 07-12-2026"
+      },
+      {
+        "event": "CBT exam date / admit card",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "All candidates except concessional categories",
+        "fee": "Rs 500"
+      },
+      {
+        "category": "SC / ST / Female / Transgender / Ex-Servicemen / Minority / EBC",
+        "fee": "Rs 250"
+      },
+      {
+        "category": "Refund after appearing in CBT (Rs 500 category)",
+        "fee": "Rs 400 (bank charges apply)"
+      },
+      {
+        "category": "Refund after appearing in CBT (Rs 250 category)",
+        "fee": "Rs 250 (bank charges apply)"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "OBC-NCL",
+        "relaxation": "3 years"
+      },
+      {
+        "category": "SC / ST",
+        "relaxation": "5 years"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Station Master",
+        "vacancies": "1265",
+        "qualification": "Bachelor's Degree"
+      }
+    ],
+    "examPattern": [
+      {
+        "subject": "Basic Science, Mathematical & Analytical Capability",
+        "questions": "60",
+        "marks": "60"
+      },
+      {
+        "subject": "Logical Capability",
+        "questions": "20",
+        "marks": "20"
+      },
+      {
+        "subject": "Mental Reasoning",
+        "questions": "20",
+        "marks": "20"
+      },
+      {
+        "subject": "Total (120 minutes, 1/3 negative marking)",
+        "questions": "100",
+        "marks": "100"
+      }
+    ],
+    "links": [
+      {
+        "label": "RRB Apply Login (rrbapply.gov.in)",
+        "url": "https://rrbapply.gov.in"
+      },
+      {
+        "label": "RRB Official Website",
+        "url": "https://rrb.indianrailways.gov.in"
+      }
+    ]
+  },
+  {
     "type": "job",
     "title": "Indian Bank 1500 Apprentices Online Form 2026",
     "board": "Indian Bank",
     "postName": "Apprentices",
     "state": "All India",
-    "cats": ["bank", "central"],
-    "edu": ["Any Graduate"],
+    "cats": [
+      "bank",
+      "central"
+    ],
+    "edu": [
+      "Any Graduate"
+    ],
     "vacancy": "1500",
     "qualificationText": "Any Graduate",
     "appMode": "Online",
@@ -26,75 +575,248 @@
     "officialWebsite": "indianbank.bank.in",
     "featured": true,
     "dates": [
-      {"event": "Application start", "date": "05-11-2026"},
-      {"event": "Last date to apply and pay fee", "date": "25-11-2026"},
-      {"event": "Age and qualification cut-off", "date": "01-11-2026"},
-      {"event": "Online exam date", "date": "To be announced"}
+      {
+        "event": "Application start",
+        "date": "05-11-2026"
+      },
+      {
+        "event": "Last date to apply and pay fee",
+        "date": "25-11-2026"
+      },
+      {
+        "event": "Age and qualification cut-off",
+        "date": "01-11-2026"
+      },
+      {
+        "event": "Online exam date",
+        "date": "To be announced"
+      }
     ],
     "fees": [
-      {"category": "General / OBC / EWS", "fee": "Rs 800 + GST"},
-      {"category": "SC / ST / PwBD", "fee": "Rs 175 + GST"}
+      {
+        "category": "General / OBC / EWS",
+        "fee": "Rs 800 + GST"
+      },
+      {
+        "category": "SC / ST / PwBD",
+        "fee": "Rs 175 + GST"
+      }
     ],
     "ageRelax": [
-      {"category": "SC / ST", "relaxation": "5 years"},
-      {"category": "OBC (Non-Creamy Layer)", "relaxation": "3 years"},
-      {"category": "PwBD", "relaxation": "10 years"}
+      {
+        "category": "SC / ST",
+        "relaxation": "5 years"
+      },
+      {
+        "category": "OBC (Non-Creamy Layer)",
+        "relaxation": "3 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "10 years"
+      }
     ],
     "categoryWise": [
-      {"category": "UR", "vacancies": "676"},
-      {"category": "OBC", "vacancies": "348"},
-      {"category": "SC", "vacancies": "252"},
-      {"category": "EWS", "vacancies": "142"},
-      {"category": "ST", "vacancies": "82"}
+      {
+        "category": "UR",
+        "vacancies": "676"
+      },
+      {
+        "category": "OBC",
+        "vacancies": "348"
+      },
+      {
+        "category": "SC",
+        "vacancies": "252"
+      },
+      {
+        "category": "EWS",
+        "vacancies": "142"
+      },
+      {
+        "category": "ST",
+        "vacancies": "82"
+      }
     ],
     "stateWise": [
-      {"state": "Uttar Pradesh", "vacancies": "285"},
-      {"state": "Tamil Nadu", "vacancies": "270"},
-      {"state": "West Bengal", "vacancies": "145"}
+      {
+        "state": "Uttar Pradesh",
+        "vacancies": "285"
+      },
+      {
+        "state": "Tamil Nadu",
+        "vacancies": "270"
+      },
+      {
+        "state": "West Bengal",
+        "vacancies": "145"
+      }
     ],
     "examPattern": [
-      {"subject": "Reasoning Aptitude", "questions": "15", "marks": "15"},
-      {"subject": "Computer Knowledge", "questions": "10", "marks": "10"},
-      {"subject": "English Language", "questions": "25", "marks": "25"},
-      {"subject": "Quantitative Aptitude", "questions": "25", "marks": "25"},
-      {"subject": "General Awareness (Banking)", "questions": "25", "marks": "25"}
+      {
+        "subject": "Reasoning Aptitude",
+        "questions": "15",
+        "marks": "15"
+      },
+      {
+        "subject": "Computer Knowledge",
+        "questions": "10",
+        "marks": "10"
+      },
+      {
+        "subject": "English Language",
+        "questions": "25",
+        "marks": "25"
+      },
+      {
+        "subject": "Quantitative Aptitude",
+        "questions": "25",
+        "marks": "25"
+      },
+      {
+        "subject": "General Awareness (Banking)",
+        "questions": "25",
+        "marks": "25"
+      }
     ],
     "uploadSpecs": [
-      {"document": "Photograph", "dimensions": "200 x 230 px", "fileSize": "20-50 KB"},
-      {"document": "Signature", "dimensions": "140 x 60 px", "fileSize": "10-20 KB"},
-      {"document": "Left thumb impression", "dimensions": "240 x 240 px", "fileSize": "20-50 KB"},
-      {"document": "Handwritten declaration", "dimensions": "800 x 400 px", "fileSize": "50-100 KB"}
+      {
+        "document": "Photograph",
+        "dimensions": "200 x 230 px",
+        "fileSize": "20-50 KB"
+      },
+      {
+        "document": "Signature",
+        "dimensions": "140 x 60 px",
+        "fileSize": "10-20 KB"
+      },
+      {
+        "document": "Left thumb impression",
+        "dimensions": "240 x 240 px",
+        "fileSize": "20-50 KB"
+      },
+      {
+        "document": "Handwritten declaration",
+        "dimensions": "800 x 400 px",
+        "fileSize": "50-100 KB"
+      }
     ],
     "links": [
-      {"label": "NATS 2.0 Registration", "url": "https://nats.education.gov.in"},
-      {"label": "Indian Bank Careers", "url": "https://www.indianbank.bank.in/en/career"}
+      {
+        "label": "NATS 2.0 Registration",
+        "url": "https://nats.education.gov.in"
+      },
+      {
+        "label": "Indian Bank Careers",
+        "url": "https://www.indianbank.bank.in/en/career"
+      }
     ]
   },
   {
-    "type": "job", "title": "SBI GM, Chief AI Officer, DGM and More - 6 Posts", "board": "SBI", "postName": "GM & Chief AI Officer, DGM and More", "state": "All India",
-    "cats": ["bank", "central"], "edu": ["B.Tech/B.E", "Any Graduate", "MBA/PGDM"], "vacancy": "6", "qualificationText": "B.Tech/B.E, Any Graduate, MBA/PGDM",
-    "advtNo": "CRPD/SCO/2026-27/30", "postDate": "2026-11-04", "lastDate": "2026-11-16", "appMode": "Online"
+    "type": "job",
+    "title": "SBI GM, Chief AI Officer, DGM and More - 6 Posts",
+    "board": "SBI",
+    "postName": "GM & Chief AI Officer, DGM and More",
+    "state": "All India",
+    "cats": [
+      "bank",
+      "central"
+    ],
+    "edu": [
+      "B.Tech/B.E",
+      "Any Graduate",
+      "MBA/PGDM"
+    ],
+    "vacancy": "6",
+    "qualificationText": "B.Tech/B.E, Any Graduate, MBA/PGDM",
+    "advtNo": "CRPD/SCO/2026-27/30",
+    "postDate": "2026-11-04",
+    "lastDate": "2026-11-16",
+    "appMode": "Online"
   },
   {
-    "type": "job", "title": "SBI Risk Specialist - 3 Posts", "board": "SBI", "postName": "Risk Specialist", "state": "All India",
-    "cats": ["bank", "central"], "edu": ["CA/CMA", "MBA/PGDM"], "vacancy": "3", "qualificationText": "CA, MBA/PGDM",
-    "advtNo": "CRPD/SCO/2026-27/27", "postDate": "2026-11-03", "lastDate": "2026-11-23", "appMode": "Online"
+    "type": "job",
+    "title": "SBI Risk Specialist - 3 Posts",
+    "board": "SBI",
+    "postName": "Risk Specialist",
+    "state": "All India",
+    "cats": [
+      "bank",
+      "central"
+    ],
+    "edu": [
+      "CA/CMA",
+      "MBA/PGDM"
+    ],
+    "vacancy": "3",
+    "qualificationText": "CA, MBA/PGDM",
+    "advtNo": "CRPD/SCO/2026-27/27",
+    "postDate": "2026-11-03",
+    "lastDate": "2026-11-23",
+    "appMode": "Online"
   },
   {
-    "type": "job", "title": "City Union Bank Chief Compliance Officer - 1 Post", "board": "City Union Bank", "postName": "Chief Compliance Officer", "state": "All India",
-    "cats": ["bank"], "edu": ["Any Graduate"], "vacancy": "1", "qualificationText": "Graduate", "postDate": "2026-11-04", "appMode": "Online"
+    "type": "job",
+    "title": "City Union Bank Chief Compliance Officer - 1 Post",
+    "board": "City Union Bank",
+    "postName": "Chief Compliance Officer",
+    "state": "All India",
+    "cats": [
+      "bank"
+    ],
+    "edu": [
+      "Any Graduate"
+    ],
+    "vacancy": "1",
+    "qualificationText": "Graduate",
+    "postDate": "2026-11-04",
+    "appMode": "Online"
   },
   {
-    "type": "job", "title": "Nainital Bank HR Advisor - 1 Post", "board": "Nainital Bank", "postName": "HR Advisor", "state": "Uttarakhand",
-    "cats": ["bank", "state"], "edu": [], "vacancy": "1", "qualificationText": "Retired Staff", "postDate": "2026-11-02", "lastDate": "2026-11-07", "appMode": "Online"
+    "type": "job",
+    "title": "Nainital Bank HR Advisor - 1 Post",
+    "board": "Nainital Bank",
+    "postName": "HR Advisor",
+    "state": "Uttarakhand",
+    "cats": [
+      "bank",
+      "state"
+    ],
+    "edu": [],
+    "vacancy": "1",
+    "qualificationText": "Retired Staff",
+    "postDate": "2026-11-02",
+    "lastDate": "2026-11-07",
+    "appMode": "Online"
   },
   {
-    "type": "admit-card", "title": "Union Bank of India GBO & SO Admit Card 2026", "board": "Union Bank of India", "postName": "GBO & SO", "cats": ["bank"], "postDate": "2026-10-24"
+    "type": "admit-card",
+    "title": "Union Bank of India GBO & SO Admit Card 2026",
+    "board": "Union Bank of India",
+    "postName": "GBO & SO",
+    "cats": [
+      "bank"
+    ],
+    "postDate": "2026-10-24"
   },
   {
-    "type": "admit-card", "title": "IBPS SO Mains Admit Card 2026", "board": "IBPS", "postName": "SO", "cats": ["bank"], "postDate": "2026-10-22"
+    "type": "admit-card",
+    "title": "IBPS SO Mains Admit Card 2026",
+    "board": "IBPS",
+    "postName": "SO",
+    "cats": [
+      "bank"
+    ],
+    "postDate": "2026-10-22"
   },
   {
-    "type": "admit-card", "title": "SBI Clerk Backlog Mains Admit Card 2026", "board": "SBI", "postName": "Clerk", "cats": ["bank"], "postDate": "2026-10-20"
+    "type": "admit-card",
+    "title": "SBI Clerk Backlog Mains Admit Card 2026",
+    "board": "SBI",
+    "postName": "Clerk",
+    "cats": [
+      "bank"
+    ],
+    "postDate": "2026-10-20"
   }
 ]

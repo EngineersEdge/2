@@ -76,6 +76,7 @@ function sanitizePost(b) {
     applyUrl: link(b.applyUrl),
     notificationUrl: link(b.notificationUrl),
     officialWebsite: str(b.officialWebsite, 200),
+    poster: /^posters\/[a-z0-9._-]+\.(jpe?g|png|webp)$/i.test(str(b.poster, 200)) ? str(b.poster, 200) : '',
     featured: !!b.featured,
     published: b.published !== false
   };
@@ -86,7 +87,7 @@ function sanitizePost(b) {
   return p;
 }
 
-const SUMMARY_KEYS = ['id', 'type', 'title', 'board', 'postName', 'edu', 'cats', 'state', 'advtNo', 'vacancy', 'qualificationText', 'postDate', 'lastDate', 'featured'];
+const SUMMARY_KEYS = ['id', 'type', 'title', 'board', 'postName', 'edu', 'cats', 'state', 'advtNo', 'vacancy', 'qualificationText', 'postDate', 'lastDate', 'featured', 'poster'];
 const summary = p => Object.fromEntries(SUMMARY_KEYS.map(k => [k, p[k]]));
 
 module.exports = function mountGovt(app, { requireAdmin, DATA }) {
@@ -95,20 +96,28 @@ module.exports = function mountGovt(app, { requireAdmin, DATA }) {
   const read = f => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return null; } };
   const save = () => { const t = FILE + '.tmp'; fs.writeFileSync(t, JSON.stringify(posts, null, 2)); fs.renameSync(t, FILE); };
 
+  // Seeding: on the first start every seed row is imported. Seed rows that carry a fixed "id" are also
+  // added to an existing data folder once (tracked in govt-seed-applied.json), so new seed posts reach a
+  // live site without re-adding posts the admin has deleted.
+  const APPLIED = path.join(DATA, 'govt-seed-applied.json');
   let posts = read(FILE);
-  if (!Array.isArray(posts)) {
-    posts = [];
-    const seed = read(SEED);
-    if (Array.isArray(seed)) {
-      for (const s of seed) {
-        try {
-          const now = new Date().toISOString();
-          posts.push({ id: slug(s.title) + '-' + crypto.randomBytes(2).toString('hex'), ...sanitizePost(s), createdAt: now, updatedAt: now });
-        } catch { /* skip bad seed row */ }
-      }
-    }
-    save();
+  const firstRun = !Array.isArray(posts);
+  if (firstRun) posts = [];
+  const applied = new Set(read(APPLIED) || []);
+  const seed = read(SEED) || [];
+  const stamp = () => new Date().toISOString();
+  let changed = firstRun;
+  for (const s of seed) {
+    if (!s || s.id || !firstRun) continue;
+    try { const now = stamp(); posts.push({ id: slug(s.title) + '-' + crypto.randomBytes(2).toString('hex'), ...sanitizePost(s), createdAt: now, updatedAt: now }); } catch { /* skip bad seed row */ }
   }
+  for (const s of seed) {
+    if (!s || !s.id || applied.has(s.id)) continue;
+    applied.add(s.id); changed = true;
+    if (posts.some(p => p.id === s.id)) continue;
+    try { const now = stamp(); posts.push({ id: String(s.id), ...sanitizePost(s), createdAt: now, updatedAt: now }); } catch { /* skip bad seed row */ }
+  }
+  if (changed) { save(); fs.writeFileSync(APPLIED, JSON.stringify([...applied])); }
 
   const byNewest = (a, b) => (b.postDate || '').localeCompare(a.postDate || '') || b.createdAt.localeCompare(a.createdAt);
   const isOpen = (p, today) => p.type !== 'job' || !p.lastDate || p.lastDate >= today;
@@ -150,6 +159,7 @@ module.exports = function mountGovt(app, { requireAdmin, DATA }) {
     const page = Math.max(parseInt(req.query.page) || 1, 1);
     let list = posts.filter(p => p.published);
     if (type) list = list.filter(p => p.type === type);
+    if (req.query.featured === '1') list = list.filter(p => p.featured);
     if (cat) list = list.filter(p => p.cats.includes(cat));
     if (state) list = list.filter(p => p.state === state);
     if (edu) list = list.filter(p => p.edu.includes(edu));

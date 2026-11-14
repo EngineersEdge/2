@@ -368,3 +368,27 @@ app.use((err, req, res, next) => res.status(400).json({ error: err.code === 'LIM
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`\nEngineer's Edge running:\n  Website : http://localhost:${PORT}\n  Admin   : http://localhost:${PORT}/admin.html  (default password: admin123 - change it!)\n`);
 });
+
+// ---------- keep-alive ----------
+// Render's free web services sleep after about 15 minutes with no incoming traffic. This server pings its
+// own public /healthz URL every KEEP_ALIVE_MS (default 50 seconds), so the service keeps receiving requests.
+// RENDER_EXTERNAL_URL is set automatically on Render. Set KEEP_ALIVE_URL to use another address, or
+// KEEP_ALIVE_MS=0 to turn it off.
+const KEEP_ALIVE_MS = process.env.KEEP_ALIVE_MS === undefined ? 50000 : Number(process.env.KEEP_ALIVE_MS);
+const KEEP_ALIVE_URL = process.env.KEEP_ALIVE_URL || (process.env.RENDER_EXTERNAL_URL ? process.env.RENDER_EXTERNAL_URL.replace(/\/+$/, '') + '/healthz' : '');
+if (KEEP_ALIVE_URL && KEEP_ALIVE_MS > 0 && typeof fetch === 'function') {
+  const every = Math.max(KEEP_ALIVE_MS, 10000);
+  let failures = 0;
+  setInterval(async () => {
+    try {
+      const r = await fetch(KEEP_ALIVE_URL, { cache: 'no-store', signal: AbortSignal.timeout(20000) });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      if (failures) console.log('Keep-alive: back online');
+      failures = 0;
+    } catch (e) {
+      failures++;
+      if (failures === 1 || failures % 20 === 0) console.log(`Keep-alive ping failed (${failures}): ${e.message}`);
+    }
+  }, every).unref();
+  console.log(`Keep-alive: pinging ${KEEP_ALIVE_URL} every ${Math.round(every / 1000)} s`);
+}

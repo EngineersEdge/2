@@ -38,6 +38,7 @@
 
     main.innerHTML = `
       <div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="jobs.html">Govt Jobs</a> &rsaquo; ${esc(TYPE[p.type] || '')}</div>
+      ${p.poster ? `<a href="${esc(p.poster)}" target="_blank" rel="noopener"><img class="jd-poster" src="${esc(p.poster)}" alt="${esc(p.title)} poster" width="560" height="640"></a>` : ''}
       <h1>${esc(p.title)}</h1>
       <p class="meta">${status} Posted: ${esc(dmy(p.postDate))}${p.state && p.state !== 'All India' ? ' &middot; ' + esc(p.state) : ''}${p.advtNo ? ' &middot; Advt No: ' + esc(p.advtNo) : ''}</p>
       ${q.length ? `<div class="quick">${q.map(([k, v]) => `<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('')}</div>` : ''}
@@ -52,7 +53,7 @@
       ${sec('Vacancy Details (Post-wise)', table([['post', 'Post'], ['vacancies', 'Vacancies'], ['qualification', 'Qualification']], p.postWise))}
       <div class="two-col">
         <div>${sec('Category-wise Vacancy', table([['category', 'Category'], ['vacancies', 'Vacancies']], p.categoryWise))}</div>
-        <div>${sec('State-wise Vacancy', table([['state', 'State / UT'], ['vacancies', 'Vacancies']], p.stateWise))}</div>
+        <div>${sec('State-wise Vacancy', table([['state', 'Location / District'], ['vacancies', 'Vacancies']], p.stateWise))}</div>
       </div>
       ${sec('Eligibility Notes', prose(p.eligibilityNotes))}
       ${sec('Selection Process', prose(p.selection))}

@@ -117,6 +117,169 @@
         new QRCode(box, { text: o.text, width: 240, height: 240, correctLevel: QRCode.CorrectLevel.M });
         await new Promise(r => setTimeout(r, 150)); const cv = box.querySelector('canvas');
         const b = document.createElement('button'); b.className = 'btn'; b.textContent = 'Download PNG'; b.onclick = async () => dl(await toBlob(cv, 'image/png'), 'qr.png'); out.appendChild(document.createElement('br')); out.appendChild(b); return '';
+      } },
+    { id: 'pdfedit', title: 'PDF Edit', desc: 'Add text, a signature or stamp, and a watermark to a PDF. Positions are % from the top-left of the page.', files: '.pdf,application/pdf',
+      opts: [
+        { k: 'items', label: 'Text to add: one per line as  page | x% | y% | font size | text  (page 0 = every page)', type: 'textarea', value: '1 | 10 | 12 | 14 | Name: Your name here' },
+        { k: 'color', label: 'Text colour', type: 'select', options: [['0,0,0', 'Black'], ['0.8,0,0', 'Red'], ['0,0.25,0.8', 'Blue']] },
+        { k: 'img', label: 'Signature or stamp image (optional, PNG or JPG)', type: 'file', accept: 'image/png,image/jpeg' },
+        { k: 'imgp', label: 'Signature page (number, 0 = every page)', type: 'number', value: 1 },
+        { k: 'imgxy', label: 'Signature position: x% | y% | width%  (top-left corner)', type: 'text', value: '70 | 80 | 25' },
+        { k: 'wm', label: 'Watermark text on every page (optional)', type: 'text', value: '' }
+      ],
+      async run(files, o, log) {
+        let doc;
+        try { doc = await PDFLib.PDFDocument.load(await readBuf(files[0])); }
+        catch { throw new Error('This PDF could not be opened. It may be password-protected or damaged.'); }
+        const font = await doc.embedFont(PDFLib.StandardFonts.Helvetica), pages = doc.getPages(), rgb = PDFLib.rgb;
+        const num = v => { const n = Number(String(v).trim()); if (!isFinite(n)) throw new Error('Expected a number, got "' + v + '".'); return n; };
+        const targets = pg => (num(pg) === 0 ? pages : [pages[num(pg) - 1]]);
+        const [r, g, b] = o.color.split(',').map(Number), col = rgb(r, g, b);
+        let added = 0;
+        for (const line of o.items.split('\n').map(l => l.trim()).filter(Boolean)) {
+          const parts = line.split('|').map(x => x.trim());
+          if (parts.length < 5) throw new Error('Each text line needs 5 parts: page | x% | y% | size | text. Problem line: ' + line);
+          const [pg, x, y, size, ...rest] = parts, text = rest.join('|');
+          if (targets(pg).some(p => !p)) throw new Error('Page ' + pg + ' does not exist. This PDF has ' + pages.length + ' page(s).');
+          for (const p of targets(pg)) {
+            const { width, height } = p.getSize();
+            try { p.drawText(text, { x: width * num(x) / 100, y: height * (1 - num(y) / 100), size: num(size) || 12, font, color: col }); }
+            catch { throw new Error('Only English letters, numbers and common symbols can be added as text here. Use the Word or PDF editor for other scripts.'); }
+            added++;
+          }
+        }
+        if (o.img) {
+          log('Placing signature');
+          const bytes = await readBuf(o.img), img = /png$/i.test(o.img.type) ? await doc.embedPng(bytes) : await doc.embedJpg(bytes);
+          const [x, y, w] = o.imgxy.split('|').map(v => num(v));
+          for (const p of targets(o.imgp)) {
+            if (!p) throw new Error('Signature page does not exist.');
+            const { width, height } = p.getSize(), dw = width * w / 100, dh = dw * img.height / img.width;
+            p.drawImage(img, { x: width * x / 100, y: height * (1 - y / 100) - dh, width: dw, height: dh });
+            added++;
+          }
+        }
+        if (o.wm.trim()) {
+          log('Adding watermark');
+          const text = o.wm.trim();
+          for (const p of pages) {
+            const { width, height } = p.getSize(), size = Math.max(18, Math.min(72, width / (text.length * 0.55)));
+            try { p.drawText(text, { x: width * 0.12, y: height * 0.42, size, font, color: rgb(0.55, 0.55, 0.55), opacity: 0.3, rotate: PDFLib.degrees(35) }); }
+            catch { throw new Error('Watermark text must use English letters, numbers and common symbols.'); }
+          }
+          added++;
+        }
+        if (!added) throw new Error('Add some text, a signature or a watermark first.');
+        dl(new Blob([await doc.save()], { type: 'application/pdf' }), base(files[0].name) + '-edited.pdf');
+        return `Edited PDF downloaded (${added} change(s)). Open it to check the placement; adjust the % values and run again if needed.`;
+      } },
+    { id: 'pdfpages', title: 'PDF Pages: Rotate / Delete', desc: 'Turn pages the right way round, or remove pages you do not need.', files: '.pdf,application/pdf',
+      opts: [
+        { k: 'act', label: 'Action', type: 'select', options: [['rot90', 'Rotate clockwise 90 degrees'], ['rot270', 'Rotate anticlockwise 90 degrees'], ['rot180', 'Rotate 180 degrees'], ['del', 'Delete the chosen pages']] },
+        { k: 'range', label: 'Pages (e.g. 1-3, 5). Leave empty for all pages', type: 'text', value: '' }
+      ],
+      async run(files, o) {
+        let d;
+        try { d = await PDFLib.PDFDocument.load(await readBuf(files[0])); }
+        catch { throw new Error('This PDF could not be opened. It may be password-protected or damaged.'); }
+        const n = d.getPageCount();
+        const sel = [...new Set(o.range.trim() ? parseRanges(o.range, n) : d.getPageIndices().map(i => i + 1))];
+        if (!sel.length) throw new Error('No valid pages. This PDF has ' + n + ' page(s).');
+        if (o.act === 'del') {
+          if (sel.length >= n) throw new Error('You cannot delete every page.');
+          sel.sort((a, b) => b - a).forEach(p => d.removePage(p - 1));
+        } else {
+          const add = { rot90: 90, rot180: 180, rot270: 270 }[o.act];
+          for (const p of sel) { const pg = d.getPage(p - 1); pg.setRotation(PDFLib.degrees((pg.getRotation().angle + add) % 360)); }
+        }
+        dl(new Blob([await d.save()], { type: 'application/pdf' }), base(files[0].name) + '-pages.pdf');
+        return o.act === 'del' ? `${sel.length} page(s) deleted. ${n - sel.length} page(s) left.` : `${sel.length} page(s) rotated.`;
+      } },
+    { id: 'docxedit', title: 'Word Editor (.docx)', desc: 'Open a Word file, edit the text here, then download it as .docx or print / save as PDF. Text and basic formatting are kept; complex layouts and headers may change.', files: '.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document', opts: [],
+      async run(files, o, log, out) {
+        if (!window.mammoth) throw new Error('Word reader did not load. Check your internet connection and refresh.');
+        if (!window.htmlDocx) throw new Error('Word export did not load. Check your internet connection and refresh.');
+        const name = files[0].name;
+        log('Opening ' + name + ' ...');
+        let res;
+        try { res = await mammoth.convertToHtml({ arrayBuffer: await readBuf(files[0]) }); }
+        catch { throw new Error('This file could not be read. Save it again in Word as .docx (old .doc files are not supported).'); }
+        const cmds = [['bold', '<b>B</b>', 'Bold'], ['italic', '<i>I</i>', 'Italic'], ['underline', '<u>U</u>', 'Underline'], ['formatBlock:h2', 'H', 'Heading'], ['insertUnorderedList', '&bull; List', 'Bulleted list'], ['insertOrderedList', '1. List', 'Numbered list'], ['undo', 'Undo', 'Undo'], ['redo', 'Redo', 'Redo']];
+        out.innerHTML = `<div class="wed">
+          <div class="wed-bar">${cmds.map(([c, l, t]) => `<button type="button" class="btn sm" data-cmd="${c}" title="${t}">${l}</button>`).join('')}</div>
+          <div class="wed-page" contenteditable="true" spellcheck="true" aria-label="Document text">${res.value || '<p>(empty document)</p>'}</div>
+          <div class="wed-actions"><button type="button" class="btn primary" data-act="docx">Download as .docx</button><button type="button" class="btn" data-act="pdf">Print / Save as PDF</button><span class="muted" data-wc></span></div>
+        </div>`;
+        const page = out.querySelector('.wed-page'), wc = out.querySelector('[data-wc]');
+        const count = () => { const w = (page.innerText || '').trim().split(/\s+/).filter(Boolean).length; wc.textContent = w + ' word' + (w === 1 ? '' : 's'); };
+        count(); page.addEventListener('input', count);
+        out.querySelector('.wed-bar').onclick = e => {
+          const b = e.target.closest('[data-cmd]'); if (!b) return;
+          page.focus();
+          const c = b.dataset.cmd;
+          if (c.startsWith('formatBlock:')) document.execCommand('formatBlock', false, c.split(':')[1]);
+          else document.execCommand(c, false, null);
+        };
+        out.querySelector('.wed-actions').onclick = e => {
+          const b = e.target.closest('[data-act]'); if (!b) return;
+          const body = page.innerHTML;
+          if (b.dataset.act === 'docx') {
+            const html = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt}</style></head><body>${body}</body></html>`;
+            dl(htmlDocx.asBlob(html), base(name) + '-edited.docx');
+          } else {
+            const w = window.open('', '_blank');
+            if (!w) { alert('Allow pop-ups for this site to print, or download the .docx instead.'); return; }
+            w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>${base(name)}</title><style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt;line-height:1.45;max-width:720px;margin:24px auto;color:#000}img{max-width:100%}</style></head><body>${body}</body></html>`);
+            w.document.close(); w.focus(); setTimeout(() => w.print(), 300);
+          }
+        };
+        return 'Document loaded. Edit the text below, then download as .docx.' + (res.messages.length ? ' Some formatting could not be read and was simplified.' : '');
+      } },
+    { id: 'txt2pdf', title: 'Text to PDF', desc: 'Type or paste text and save it as an A4 PDF. Use English letters, numbers and common symbols.', files: null,
+      opts: [
+        { k: 'text', label: 'Text', type: 'textarea', value: 'Type or paste your text here.' },
+        { k: 'fs', label: 'Font size', type: 'select', options: [['11', '11'], ['12', '12'], ['14', '14']] }
+      ],
+      async run(files, o) {
+        const size = +o.fs, M = 50, W = 595.28, H = 841.89, lh = size * 1.45;
+        const doc = await PDFLib.PDFDocument.create(), font = await doc.embedFont(PDFLib.StandardFonts.Helvetica);
+        const maxW = W - 2 * M, out = [];
+        const friendly = 'Only English letters, numbers and common symbols can be used here.';
+        try {
+          for (const para of o.text.replace(/\r/g, '').split('\n')) {
+            if (!para.trim()) { out.push(''); continue; }
+            let line = '';
+            for (const word of para.split(/\s+/)) {
+              const test = line ? line + ' ' + word : word;
+              if (font.widthOfTextAtSize(test, size) > maxW && line) { out.push(line); line = word; } else line = test;
+            }
+            out.push(line);
+          }
+        } catch { throw new Error(friendly); }
+        let page = null, y = 0;
+        for (const line of out) {
+          if (!page || y < M + lh) { page = doc.addPage([W, H]); y = H - M - size; }
+          if (line) { try { page.drawText(line, { x: M, y, size, font }); } catch { throw new Error('Only English letters, numbers and common symbols can be used here.'); } }
+          y -= lh;
+        }
+        if (!page) throw new Error('Enter some text first.');
+        dl(new Blob([await doc.save()], { type: 'application/pdf' }), 'text.pdf');
+        return `PDF created with ${doc.getPageCount()} page(s).`;
+      } },
+    { id: 'imgcompress', title: 'Image Compressor', desc: 'Make a JPG smaller for forms and portals, with a maximum file size you choose.', files: 'image/*',
+      opts: [
+        { k: 'kb', label: 'Maximum size (KB)', type: 'number', value: 200 },
+        { k: 'scale', label: 'Size', type: 'select', options: [['1', 'Keep original size'], ['0.75', '75% of original'], ['0.5', '50% of original']] }
+      ],
+      async run(files, o, log) {
+        const kb = +o.kb; if (!kb || kb < 5) throw new Error('Enter a maximum size of at least 5 KB.');
+        const i = await loadImg(files[0]), s = +o.scale;
+        const c = drawToCanvas(i, Math.round(i.naturalWidth * s), Math.round(i.naturalHeight * s), '#fff');
+        let lo = 0.05, hi = 0.95, best = await toBlob(c, 'image/jpeg', lo);
+        if (best.size > kb * 1024) throw new Error('Even at the lowest quality this is ' + fmtKB(best.size) + '. Choose a smaller size (50%) or a bigger KB limit.');
+        for (let k = 0; k < 9; k++) { const m = (lo + hi) / 2, b = await toBlob(c, 'image/jpeg', m); if (b.size <= kb * 1024) { best = b; lo = m; } else hi = m; }
+        dl(best, base(files[0].name) + '-small.jpg');
+        return `Saved ${fmtKB(files[0].size)} to ${fmtKB(best.size)} (${c.width} x ${c.height} px).`;
       } }
   ];
 
@@ -128,7 +291,9 @@
     if (t.files) form.insertAdjacentHTML('beforeend', `<label>${t.multiple ? 'Select files' : 'Select file'}<input type="file" name="f" accept="${t.files}" ${t.multiple ? 'multiple' : ''}></label>`);
     t.opts.forEach(op => {
       const val = op.value ?? '';
-      form.insertAdjacentHTML('beforeend', `<label>${op.label}${op.type === 'select' ? `<select name="${op.k}">${op.options.map(([v, l]) => `<option value="${v}">${l}</option>`).join('')}</select>` : `<input name="${op.k}" type="${op.type}" value="${val}">`}</label>`);
+      if (op.type === 'file') form.insertAdjacentHTML('beforeend', `<label>${op.label}<input name="${op.k}" type="file" accept="${op.accept || 'image/*'}"></label>`);
+      else if (op.type === 'textarea') form.insertAdjacentHTML('beforeend', `<label>${op.label}<textarea name="${op.k}" rows="5">${String(val).replace(/&/g, '&amp;').replace(/</g, '&lt;')}</textarea></label>`);
+      else form.insertAdjacentHTML('beforeend', `<label>${op.label}${op.type === 'select' ? `<select name="${op.k}">${op.options.map(([v, l]) => `<option value="${v}">${l}</option>`).join('')}</select>` : `<input name="${op.k}" type="${op.type}" value="${val}">`}</label>`);
     });
     form.insertAdjacentHTML('beforeend', '<button class="btn primary" type="submit">Convert</button>');
     if (t.id === 'photo') form.preset.onchange = () => { if (form.preset.value) { const [w, h, k] = form.preset.value.split('|'); form.w.value = w; form.h.value = h; form.kb.value = k; } };
@@ -137,7 +302,7 @@
       const btn = $('button', form); btn.disabled = true;
       try {
         const files = form.f ? [...form.f.files] : []; if (t.files && !files.length) throw new Error('Select a file first.');
-        const o = {}; t.opts.forEach(op => o[op.k] = form[op.k].value);
+        const o = {}; t.opts.forEach(op => o[op.k] = op.type === 'file' ? (form[op.k].files[0] || null) : form[op.k].value);
         const msg = await t.run(files, o, m => log.textContent = m, out); log.textContent = msg || ''; log.classList.add('ok');
       } catch (err) { log.textContent = err.message || String(err); log.classList.add('bad'); }
       btn.disabled = false;
