@@ -107,3 +107,10 @@
 @media(max-width:420px){.jgrid{grid-template-columns:1fr}}
 @media print{.jd-poster{float:none;width:100%}}
 @media(max-width:700px){.poster-strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;margin:0 -16px;padding-left:16px;padding-right:16px;scrollbar-width:thin}.pcard{flex:0 0 72%;scroll-snap-align:start}}
+/* share bar on job details */
+.share{margin:18px 0 6px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.share > b{display:block;margin-bottom:8px;font-size:14.5px}
+.share-btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.share-btns .btn{margin:0}
+.share-msg{font-size:13px;color:var(--ok);font-weight:600}
+@media print{.share{display:none}}

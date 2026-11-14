@@ -36,6 +36,17 @@
 
     const wa = 'https://wa.me/919797975711?text=' + encodeURIComponent(`Hello, I want to apply for: ${p.title}. Please help me fill the form.`);
 
+    // share links: the post's own page address and a short title
+    const pageUrl = location.href.split('#')[0];
+    const shareText = `${p.title} | Engineer's Edge`;
+    const enc = encodeURIComponent;
+    const shareLinks = {
+      whatsapp: 'https://wa.me/?text=' + enc(shareText + '\n' + pageUrl),
+      telegram: 'https://t.me/share/url?url=' + enc(pageUrl) + '&text=' + enc(shareText),
+      facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + enc(pageUrl),
+      email: 'mailto:?subject=' + enc(shareText) + '&body=' + enc(shareText + '\n\n' + pageUrl)
+    };
+
     main.innerHTML = `
       <div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="jobs.html">Govt Jobs</a> &rsaquo; ${esc(TYPE[p.type] || '')}</div>
       ${p.poster ? `<a href="${esc(p.poster)}" target="_blank" rel="noopener"><img class="jd-poster" src="${esc(p.poster)}" alt="${esc(p.title)} poster" width="560" height="640"></a>` : ''}
@@ -62,8 +73,35 @@
       ${sec('Photo / Signature Upload Specifications', table([['document', 'Document'], ['dimensions', 'Dimensions'], ['fileSize', 'File size']], p.uploadSpecs))}
       ${sec('Documents Required', ol(p.documents))}
       ${links.length ? sec('Important Links', `<div class="links-box">${links.map(([l, u]) => `<a class="btn" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(l)}</a>`).join('')}</div>`) : ''}
+      <div class="share" aria-label="Share this post">
+        <b>Share this post</b>
+        <div class="share-btns">
+          <a class="btn sm wa" href="${esc(shareLinks.whatsapp)}" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn sm" href="${esc(shareLinks.telegram)}" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn sm" href="${esc(shareLinks.facebook)}" target="_blank" rel="noopener">Facebook</a>
+          <a class="btn sm" href="${esc(shareLinks.email)}">Email</a>
+          <button type="button" class="btn sm" id="copyLink">Copy link</button>
+          <button type="button" class="btn sm" id="nativeShare" hidden>More options</button>
+          <span id="shareMsg" class="share-msg" role="status"></span>
+        </div>
+      </div>
       <div class="cta-box"><h3>Want us to fill this form for you?</h3><p style="margin:0 0 10px">Send your documents on WhatsApp. We prepare the photo and signature to the right size, fill the form and share your receipt.</p><a class="btn wa" href="${esc(wa)}" target="_blank" rel="noopener">Apply via WhatsApp</a></div>
       <p class="disclaimer">Engineer's Edge is not the recruiting authority. Details are summarised from the official notification and may change. Please verify on the official website before applying.</p>`;
+
+    // copy link + native share (phones show their own share sheet)
+    const msg = t => { const el = document.getElementById('shareMsg'); if (el) { el.textContent = t; setTimeout(() => { if (el.textContent === t) el.textContent = ''; }, 2500); } };
+    document.getElementById('copyLink').onclick = async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(pageUrl);
+        else { const t = document.createElement('textarea'); t.value = pageUrl; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+        msg('Link copied');
+      } catch { msg('Could not copy. Long-press the address bar instead.'); }
+    };
+    if (navigator.share) {
+      const ns = document.getElementById('nativeShare');
+      ns.hidden = false;
+      ns.onclick = () => navigator.share({ title: p.title, text: shareText, url: pageUrl }).catch(() => {});
+    }
   }
 
   if (!id) { main.innerHTML = '<p class="bad" style="padding:40px 0">No job selected. <a href="jobs.html">Browse all jobs</a></p>'; return; }
