@@ -139,6 +139,34 @@ module.exports = function mountGovt(app, { requireAdmin, DATA }) {
   const byNewest = (a, b) => (b.postDate || '').localeCompare(a.postDate || '') || b.createdAt.localeCompare(a.createdAt);
   const isOpen = (p, today) => p.type !== 'job' || !p.lastDate || p.lastDate >= today;
 
+  // ---------- job page preview ----------
+  // WhatsApp, Telegram and Facebook read the page's meta tags without running JavaScript, so the server
+  // fills in this post's title, description and poster image. Unknown ids get the plain page.
+  const htmlEsc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  app.get('/job.html', (req, res, next) => {
+    let html;
+    try { html = fs.readFileSync(path.join(__dirname, 'public', 'job.html'), 'utf8'); } catch { return next(); }
+    const p = posts.find(x => x.id === String(req.query.id || '') && x.published);
+    if (!p) return res.type('html').send(html);
+    const base = (process.env.RENDER_EXTERNAL_URL || `${req.protocol}://${req.get('host')}`).replace(/\/+$/, '');
+    const dmy = d => d ? d.split('-').reverse().join('-') : '';
+    const title = `${p.title} | Engineer's Edge`;
+    const desc = [p.vacancy && `${p.vacancy} posts`, p.lastDate && `Last date ${dmy(p.lastDate)}`, p.qualificationText].filter(Boolean).join(' · ') || "Govt job details from Engineer's Edge";
+    const img = base + '/' + (p.poster || 'brand/ee-logo-light-hires.png');
+    const url = base + '/job.html?id=' + encodeURIComponent(p.id);
+    const meta = `<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineer's Edge">
+<meta property="og:title" content="${htmlEsc(title)}">
+<meta property="og:description" content="${htmlEsc(desc)}">
+<meta property="og:image" content="${htmlEsc(img)}">
+<meta property="og:url" content="${htmlEsc(url)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${htmlEsc(title)}">
+<meta name="twitter:image" content="${htmlEsc(img)}">`;
+    html = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${htmlEsc(title)}</title>`).replace('</head>', () => meta + '\n</head>');
+    res.type('html').send(html);
+  });
+
   // ---------- public ----------
   app.get('/api/govt/meta', (req, res) => {
     const today = todayIST();

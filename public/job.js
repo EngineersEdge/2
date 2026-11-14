@@ -81,6 +81,7 @@
           <a class="btn sm" href="${esc(shareLinks.facebook)}" target="_blank" rel="noopener">Facebook</a>
           <a class="btn sm" href="${esc(shareLinks.email)}">Email</a>
           <button type="button" class="btn sm" id="copyLink">Copy link</button>
+          ${p.poster ? `<a class="btn sm" href="${esc(p.poster)}" download>Download poster</a><button type="button" class="btn sm" id="shareImg" hidden>Share with poster</button>` : ''}
           <button type="button" class="btn sm" id="nativeShare" hidden>More options</button>
           <span id="shareMsg" class="share-msg" role="status"></span>
         </div>
@@ -97,6 +98,16 @@
         msg('Link copied');
       } catch { msg('Could not copy. Long-press the address bar instead.'); }
     };
+    // phones that can share files: send the poster image together with the link
+    if (p.poster && navigator.canShare && navigator.share) {
+      fetch(p.poster).then(r => r.blob()).then(blob => {
+        const file = new File([blob], p.poster.split('/').pop(), { type: blob.type || 'image/jpeg' });
+        if (!navigator.canShare({ files: [file] })) return;
+        const b = document.getElementById('shareImg');
+        b.hidden = false;
+        b.onclick = () => navigator.share({ files: [file], title: p.title, text: shareText + '\n' + pageUrl }).catch(() => {});
+      }).catch(() => {});
+    }
     if (navigator.share) {
       const ns = document.getElementById('nativeShare');
       ns.hidden = false;

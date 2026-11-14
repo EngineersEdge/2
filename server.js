@@ -136,10 +136,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
-
 // government jobs / admit cards / results section (public pages + admin CRUD)
+// mounted before the static files so /job.html can add each post's preview tags
 require('./govt')(app, { requireAdmin, DATA });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 const ALLOWED = ['.pdf', '.jpg', '.jpeg', '.png'];
 const upload = multer({
