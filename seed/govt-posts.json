@@ -1,5 +1,158 @@
 [
   {
+    "id": "jkssb-je-civil-2026",
+    "type": "job",
+    "title": "JKSSB Junior Engineer (Civil) Recruitment 2026 - 458 Posts (Jal Shakti & PWD R&B)",
+    "board": "JKSSB (Jammu & Kashmir Services Selection Board)",
+    "postName": "Junior Engineer (Civil)",
+    "advtNo": "Advt. Notification No. 11 of 2026",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "state",
+      "engineering"
+    ],
+    "edu": [
+      "Diploma",
+      "B.Tech/B.E"
+    ],
+    "vacancy": "458",
+    "qualificationText": "3-year Diploma in Civil Engineering, or Degree in Civil Engineering, or AMIE Section A & B",
+    "appMode": "Online",
+    "postDate": "2026-10-27",
+    "startDate": "2026-11-30",
+    "lastDate": "2026-12-29",
+    "ageMin": "18",
+    "ageMax": "40",
+    "ageAsOn": "2026-01-01",
+    "salary": "Pay Level-6: Rs 35,400 - Rs 1,12,400 per month plus allowances",
+    "shortInfo": "JKSSB has invited online applications for 458 Junior Engineer (Civil) posts in the UT Cadre: 282 in the Jal Shakti Department (Item No. 266) and 176 in the Public Works (R&B) Department (Item No. 267), under Advertisement No. 11 of 2026. Applications run from 30 November to 29 December 2026. Selection is by an objective OMR-based written test. Only J&K domicile holders can apply.",
+    "eligibilityNotes": "Must be a domicile of the UT of J&K with a valid Domicile Certificate issued on or before 29.12.2026.\nQualification (any one): 3-year Diploma in Civil Engineering from a government-recognised institute, Degree in Civil Engineering from an Indian university, or AMIE Section A & B (India). It must be obtained on or before 29.12.2026. The Board may ask for an equivalence certificate.\nAge is counted as on 01.01.2026. Upper limit: 40 years (OM, not born before 01.01.1986), 43 years (SC, ST-1, ST-2, OBC, RBA, ALC/IB, EWS, not born before 01.01.1983), 42 years (PwBD, not born before 01.01.1984). Not born after 01.01.2008.\nEx-Servicemen: period of military service is deducted from actual age, subject to the notification's maximum age condition.\nApply for Item No. 266 (Jal Shakti), Item No. 267 (PW R&B), or both, setting preferences if applying for both.\nVacancies may increase or decrease, and the recruitment is subject to any pending court cases.",
+    "selection": "Objective-type (MCQ) written / OMR examination, English only. Negative marking: one-fourth of the marks for each wrong answer.\nSelection is on the merit of the written examination only, followed by document verification of shortlisted candidates. No interview.\nNumber of questions, total marks, duration, exam date and centres will be notified separately by JKSSB. The syllabus is also yet to be notified.",
+    "howToApply": "Visit www.jkssb.nic.in and open Advertisement Notification No. 11 of 2026\nRegister or log in on the online portal from 30 November 2026\nEnter name, date of birth, father's and mother's names exactly as in the Matriculation Certificate\nSelect Item No. 266 (Jal Shakti) and/or Item No. 267 (PW R&B) and set preferences\nUpload live photograph and signature (10 KB to 20 KB each), category certificate (PDF, max 200 KB) and qualification certificates (self-attested PDF, max 200 KB)\nPay the fee online (Net Banking, Credit Card or Debit Card)\nReview everything, then submit. Corrections may not be allowed after submission\nSave and print the application. Do not send a hard copy unless instructed. In-service candidates must apply through their Head of Department",
+    "documents": "Diploma / Degree / AMIE certificate\nMatriculation Certificate (proof of name and date of birth)\nValid Domicile Certificate (J&K)\nCategory / reservation certificate, if applicable\nPrinted copy of the submitted application and original photo ID proof\nTwo recent passport-size colour photographs (not older than 6 months, bearing the date)\nBonafide Certificate for degrees from non-J&K universities (except Central Universities), if applicable\nEx-Servicemen certificate (Form-XIV) and affidavit, if applicable",
+    "applyUrl": "https://www.jkssb.nic.in",
+    "notificationUrl": "https://www.jkssb.nic.in",
+    "officialWebsite": "www.jkssb.nic.in",
+    "poster": "posters/jkssb-je-civil-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Notification release (Advt. 11 of 2026)",
+        "date": "27-10-2026"
+      },
+      {
+        "event": "Online application start",
+        "date": "30-11-2026"
+      },
+      {
+        "event": "Last date to apply",
+        "date": "29-12-2026"
+      },
+      {
+        "event": "Written test date",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "General / OM / OBC / RBA / ALC-IB",
+        "fee": "Rs 600"
+      },
+      {
+        "category": "SC / ST-1 / ST-2 / EWS / PwBD",
+        "fee": "Rs 500"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "SC / ST-1 / ST-2 / OBC / RBA / ALC-IB / EWS",
+        "relaxation": "Max age 43 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "Max age 42 years"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service deducted from age, within the notification's limit"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Junior Engineer (Civil) - Jal Shakti Department (Item 266)",
+        "vacancies": "282",
+        "qualification": "Diploma / Degree / AMIE (Civil)"
+      },
+      {
+        "post": "Junior Engineer (Civil) - Public Works R&B Department (Item 267)",
+        "vacancies": "176",
+        "qualification": "Diploma / Degree / AMIE (Civil)"
+      }
+    ],
+    "categoryWise": [
+      {
+        "category": "Open Merit (OM)",
+        "vacancies": "184"
+      },
+      {
+        "category": "Scheduled Castes (SC)",
+        "vacancies": "37"
+      },
+      {
+        "category": "Scheduled Tribes (ST-1)",
+        "vacancies": "46"
+      },
+      {
+        "category": "Scheduled Tribes (ST-2)",
+        "vacancies": "46"
+      },
+      {
+        "category": "Other Backward Classes (OBC)",
+        "vacancies": "36"
+      },
+      {
+        "category": "ALC / IB (near LoC / International Border)",
+        "vacancies": "18"
+      },
+      {
+        "category": "Residents of Backward Areas (RBA)",
+        "vacancies": "45"
+      },
+      {
+        "category": "Economically Weaker Sections (EWS)",
+        "vacancies": "46"
+      }
+    ],
+    "uploadSpecs": [
+      {
+        "document": "Live photograph",
+        "dimensions": "-",
+        "fileSize": "10 KB to 20 KB"
+      },
+      {
+        "document": "Signature",
+        "dimensions": "-",
+        "fileSize": "10 KB to 20 KB"
+      },
+      {
+        "document": "Category certificate (PDF)",
+        "dimensions": "-",
+        "fileSize": "Max 200 KB"
+      },
+      {
+        "document": "Qualification certificates (self-attested PDF)",
+        "dimensions": "-",
+        "fileSize": "Max 200 KB"
+      }
+    ],
+    "links": [
+      {
+        "label": "JKSSB Official Website",
+        "url": "https://www.jkssb.nic.in"
+      }
+    ]
+  },
+  {
     "id": "skuast-jammu-accounts-assistant-2026",
     "type": "job",
     "title": "SKUAST Jammu Recruitment 2026 - 3 Accounts Assistant / Cashier Posts",
