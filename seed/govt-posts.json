@@ -1,70 +1,971 @@
 [
   {
-    "id": "gmc-jammu-pts-1-2026",
+    "id": "jkssb-mts-class-iv-2026-r2",
     "type": "job",
-    "title": "GMC Jammu Recruitment 2026 - Project Technical Support-I (ICMR Project)",
-    "board": "Government Medical College (GMC), Jammu",
-    "postName": "Project Technical Support-I (PTS-I)",
-    "advtNo": "Advt. No. GMCJ/Project/1487 dated 11-11-2026",
+    "title": "JKSSB MTS / Class-IV & Sanitation Worker Recruitment 2026 - 2863 Posts",
+    "board": "JKSSB (Jammu & Kashmir Services Selection Board)",
+    "postName": "Class-IV (MTS) & Sanitation Worker",
+    "advtNo": "Advt. No. 09 of 2026",
     "state": "Jammu & Kashmir",
     "cats": [
-      "state",
-      "medical"
+      "state"
     ],
     "edu": [
-      "B.Sc",
-      "Post Graduate",
-      "Medical/Nursing"
+      "8th",
+      "10th",
+      "12th"
     ],
-    "vacancy": "1",
-    "qualificationText": "B.Sc / M.Sc in Radiography, MIT, MRIT or equivalent. Bachelor's route needs 1 year of experience; Master's route needs none.",
-    "appMode": "Email / Post",
-    "postDate": "2026-11-11",
-    "startDate": "",
-    "lastDate": "2026-11-23",
-    "ageMin": "",
-    "ageMax": "30",
-    "ageAsOn": "",
-    "salary": "Rs 18,000 + 20% HRA = Rs 21,600 per month (Year 1 and 2)",
-    "shortInfo": "GMC Jammu has invited applications for 1 temporary post of Project Technical Support-I under the ICMR-funded PRECISION-HPB project in the Department of Radio Diagnosis (Principal Investigator: Dr. Rajesh Sharma). The last date is 23 November 2026 up to 4:00 PM. Only residents of J&K can apply.",
-    "eligibilityNotes": "Bachelor's route: B.Sc. Radiography, BMRIT, B.Sc. MIT, B.Sc. (RT), BRIT or recognised equivalent in medical radiology / imaging technology, with at least 1 year of relevant work experience.\nMaster's route: M.Sc. Radiography, M.Sc. MRIT, M.Sc. MIT, MRIT or recognised equivalent. No post-bachelor experience needed.\nDesirable: experience with medical imaging data, CT/MRI datasets, DICOM, clinical or biomedical research, MS Excel, and AI/ML in medical imaging.\nMaximum age is 30 years, counted as on the last date of application.\nCandidates must be residents of the UT of J&K.\nThe post is temporary and project-based, initially for one year. Extension depends on performance, project needs and funds. No right to regularisation.\nSelected candidates must report within 7 days with original documents, sign a contract agreement and give an affidavit before a 1st Class Magistrate. One month's notice is needed to resign.",
-    "selection": "No written test or walk-in. If more than 10 eligible applications are received, candidates are shortlisted on academic performance, research and public health experience.\nShortlisted candidates are called for an interview and final selection is based on interview scores.\nThe interview date will be announced on the GMC Jammu website. No TA/DA is paid for attending.",
-    "howToApply": "Download the advertisement and application form from the GMC Jammu website (gmcjammu.nic.in)\nFill in the form completely and attach self-attested copies of all documents\nAffix one passport photograph attested by a Gazetted Officer and attach one extra photograph\nSubmit by hand at the Office of the Principal, GMC Jammu, or email scanned copies to the address given in the notification\nLast date: 23 November 2026, up to 4:00 PM (next working day if it falls on a holiday)\nApplications with missing documents will be rejected. Phone: 0191-2584247",
-    "documents": "Educational qualification certificates and mark sheets\nDomicile certificate\nExperience certificate from a competent authority\nMatriculation or date-of-birth certificate\nUpdated CV / resume\nTwo passport-size photographs (one attested by a Gazetted Officer)\nNOC or application through proper channel, if applicable",
-    "applyUrl": "https://gmcjammu.nic.in",
-    "notificationUrl": "https://jkadworld.com/wp-content/uploads/2026/11/adv-12.pdf",
-    "officialWebsite": "gmcjammu.nic.in",
-    "poster": "posters/gmc-jammu-pts-1-2026.jpg",
-    "featured": false,
+    "vacancy": "2863",
+    "qualificationText": "MTS: Matric (10th) to 10+2. Sanitation Worker: 8th Pass to 10+2",
+    "appMode": "Online",
+    "postDate": "2026-09-01",
+    "startDate": "2026-10-14",
+    "lastDate": "2026-11-27",
+    "ageMin": "18",
+    "ageMax": "40",
+    "ageAsOn": "2026-01-01",
+    "salary": "Pay Level SL1: Rs 14,800 - Rs 47,100 per month",
+    "shortInfo": "JKSSB has invited online applications for 2,863 Class-IV (MTS) and Sanitation Worker posts across UT, Divisional and District cadres under Advertisement No. 09 of 2026. The last date has been extended to 27 November 2026. Only J&K domicile holders can apply.",
+    "eligibilityNotes": "Must be a Domicile holder of the Union Territory of J&K with a valid Domicile Certificate on or before the cut-off date.\nQualification must match the post: MTS needs Matric (10th) to 10+2; Sanitation Worker needs 8th Pass to 10+2. Other qualifications are not eligible.\nAge is counted as on 01.01.2026. Upper limit: 40 years (OM), 43 years (SC, ST-1, ST-2, OBC, RBA, ALC/IB, EWS), 42 years (PwBD).\nOnly one application per item number is allowed. Multiple applications for the same item number lead to cancellation.",
+    "selection": "Objective type written test (MCQ, English only). Negative marking: one-fourth of the marks of each wrong answer is deducted.\nFinal merit = written test marks + additional weightage, then document verification.\nUT Cadre: written 85 + no family member in govt service 5 + widow/divorced/orphan girl 5 + casual worker (5+ years) 5 = 100.\nDivisional Cadre: written 80 + home division 5 + the three 5-mark claims = 100.\nDistrict Cadre: written 75 + home district 10 + the three 5-mark claims = 100.\nCadre and department are allocated on merit-cum-preference basis.",
+    "howToApply": "Visit www.jkssb.nic.in once the application window opens\nRegister or log in on the online portal\nFill in personal, educational and category details carefully\nUpload live photograph and signature (10 KB to 20 KB each)\nPay the fee online (Net Banking, Credit Card or Debit Card)\nReview everything, then submit. No corrections are allowed after submission\nSave and print the application for document verification",
+    "documents": "Original and self-attested copies of the online application and all certificates\nValid Domicile Certificate (J&K)\nEducational certificates (Matric / 8th / 10+2 as applicable)\nCategory / reservation certificate, if applicable\nTwo recent passport-size colour photographs (not older than 6 months) and a valid photo ID\nWeightage certificates (no government family member, widow/divorced/orphan, or casual-worker status), if claimed",
+    "applyUrl": "https://www.jkssb.nic.in",
+    "officialWebsite": "www.jkssb.nic.in",
+    "poster": "posters/jkssb-class-iv-2026.jpg",
+    "featured": true,
     "dates": [
       {
-        "event": "Advertisement date",
-        "date": "11-11-2026"
+        "event": "Notification release (Advt. 09 of 2026)",
+        "date": "01-09-2026"
       },
       {
-        "event": "Last date to apply (up to 4:00 PM)",
-        "date": "23-11-2026"
+        "event": "Online application start",
+        "date": "14-10-2026"
       },
       {
-        "event": "Interview date",
-        "date": "To be announced on website"
+        "event": "Last date to apply (extended)",
+        "date": "27-11-2026"
+      },
+      {
+        "event": "Written test date",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "General / OM / OBC / RBA / ALC-IB",
+        "fee": "Rs 600"
+      },
+      {
+        "category": "SC / ST-1 / ST-2 / EWS / PwBD",
+        "fee": "Rs 500"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "SC / ST / OBC / RBA / ALC-IB / EWS",
+        "relaxation": "Max age 43 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "Max age 42 years"
+      },
+      {
+        "category": "Casual workers (J&K Special Recruitment Rules 2020)",
+        "relaxation": "+5 years on upper limit"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service deducted from age; allowed up to 3 years above the limit"
       }
     ],
     "postWise": [
       {
-        "post": "Project Technical Support-I (PTS-I)",
-        "vacancies": "1",
-        "qualification": "B.Sc / M.Sc Radiography, MIT, MRIT or equivalent"
+        "post": "UT Cadre",
+        "vacancies": "105",
+        "qualification": "MTS / Sanitation Worker"
+      },
+      {
+        "post": "Divisional Cadre - Jammu",
+        "vacancies": "1093",
+        "qualification": "MTS / Sanitation Worker"
+      },
+      {
+        "post": "Divisional Cadre - Kashmir",
+        "vacancies": "897",
+        "qualification": "MTS / Sanitation Worker"
+      },
+      {
+        "post": "District Cadre (all 20 districts)",
+        "vacancies": "768",
+        "qualification": "MTS / Sanitation Worker"
+      }
+    ],
+    "categoryWise": [
+      {
+        "category": "Open Merit (OM)",
+        "vacancies": "1178"
+      },
+      {
+        "category": "Scheduled Castes (SC)",
+        "vacancies": "246"
+      },
+      {
+        "category": "Scheduled Tribes (ST-1)",
+        "vacancies": "293"
+      },
+      {
+        "category": "Scheduled Tribes (ST-2)",
+        "vacancies": "286"
+      },
+      {
+        "category": "Other Backward Classes (OBC)",
+        "vacancies": "221"
+      },
+      {
+        "category": "ALC / IB (near LoC / International Border)",
+        "vacancies": "115"
+      },
+      {
+        "category": "Residents of Backward Areas (RBA)",
+        "vacancies": "271"
+      },
+      {
+        "category": "Economically Weaker Sections (EWS)",
+        "vacancies": "253"
+      }
+    ],
+    "stateWise": [
+      {
+        "state": "Anantnag",
+        "vacancies": "59"
+      },
+      {
+        "state": "Bandipora",
+        "vacancies": "20"
+      },
+      {
+        "state": "Baramulla",
+        "vacancies": "75"
+      },
+      {
+        "state": "Budgam",
+        "vacancies": "47"
+      },
+      {
+        "state": "Doda",
+        "vacancies": "46"
+      },
+      {
+        "state": "Ganderbal",
+        "vacancies": "46"
+      },
+      {
+        "state": "Jammu",
+        "vacancies": "65"
+      },
+      {
+        "state": "Kathua",
+        "vacancies": "50"
+      },
+      {
+        "state": "Kishtwar",
+        "vacancies": "25"
+      },
+      {
+        "state": "Kulgam",
+        "vacancies": "23"
+      },
+      {
+        "state": "Kupwara",
+        "vacancies": "24"
+      },
+      {
+        "state": "Poonch",
+        "vacancies": "49"
+      },
+      {
+        "state": "Pulwama",
+        "vacancies": "45"
+      },
+      {
+        "state": "Rajouri",
+        "vacancies": "28"
+      },
+      {
+        "state": "Ramban",
+        "vacancies": "9"
+      },
+      {
+        "state": "Reasi",
+        "vacancies": "34"
+      },
+      {
+        "state": "Samba",
+        "vacancies": "14"
+      },
+      {
+        "state": "Shopian",
+        "vacancies": "10"
+      },
+      {
+        "state": "Srinagar",
+        "vacancies": "53"
+      },
+      {
+        "state": "Udhampur",
+        "vacancies": "46"
+      }
+    ],
+    "uploadSpecs": [
+      {
+        "document": "Live photograph",
+        "dimensions": "As per notification",
+        "fileSize": "10 - 20 KB"
+      },
+      {
+        "document": "Signature",
+        "dimensions": "As per notification",
+        "fileSize": "10 - 20 KB"
       }
     ],
     "links": [
       {
-        "label": "GMC Jammu Official Website",
-        "url": "https://gmcjammu.nic.in"
+        "label": "JKSSB Official Website",
+        "url": "https://www.jkssb.nic.in"
+      }
+    ]
+  },
+  {
+    "id": "jkssb-je-civil-2026-r2",
+    "type": "job",
+    "title": "JKSSB Junior Engineer (Civil) Recruitment 2026 - 458 Posts (Jal Shakti & PWD R&B)",
+    "board": "JKSSB (Jammu & Kashmir Services Selection Board)",
+    "postName": "Junior Engineer (Civil)",
+    "advtNo": "Advt. Notification No. 11 of 2026",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "state",
+      "engineering"
+    ],
+    "edu": [
+      "Diploma",
+      "B.Tech/B.E"
+    ],
+    "vacancy": "458",
+    "qualificationText": "3-year Diploma in Civil Engineering, or Degree in Civil Engineering, or AMIE Section A & B",
+    "appMode": "Online",
+    "postDate": "2026-10-27",
+    "startDate": "2026-11-30",
+    "lastDate": "2026-12-29",
+    "ageMin": "18",
+    "ageMax": "40",
+    "ageAsOn": "2026-01-01",
+    "salary": "Pay Level-6: Rs 35,400 - Rs 1,12,400 per month plus allowances",
+    "shortInfo": "JKSSB has invited online applications for 458 Junior Engineer (Civil) posts in the UT Cadre: 282 in the Jal Shakti Department (Item No. 266) and 176 in the Public Works (R&B) Department (Item No. 267), under Advertisement No. 11 of 2026. Applications run from 30 November to 29 December 2026. Selection is by an objective OMR-based written test. Only J&K domicile holders can apply.",
+    "eligibilityNotes": "Must be a domicile of the UT of J&K with a valid Domicile Certificate issued on or before 29.12.2026.\nQualification (any one): 3-year Diploma in Civil Engineering from a government-recognised institute, Degree in Civil Engineering from an Indian university, or AMIE Section A & B (India). It must be obtained on or before 29.12.2026. The Board may ask for an equivalence certificate.\nAge is counted as on 01.01.2026. Upper limit: 40 years (OM, not born before 01.01.1986), 43 years (SC, ST-1, ST-2, OBC, RBA, ALC/IB, EWS, not born before 01.01.1983), 42 years (PwBD, not born before 01.01.1984). Not born after 01.01.2008.\nEx-Servicemen: period of military service is deducted from actual age, subject to the notification's maximum age condition.\nApply for Item No. 266 (Jal Shakti), Item No. 267 (PW R&B), or both, setting preferences if applying for both.\nVacancies may increase or decrease, and the recruitment is subject to any pending court cases.",
+    "selection": "Objective-type (MCQ) written / OMR examination, English only. Negative marking: one-fourth of the marks for each wrong answer.\nSelection is on the merit of the written examination only, followed by document verification of shortlisted candidates. No interview.\nNumber of questions, total marks, duration, exam date and centres will be notified separately by JKSSB. The syllabus is also yet to be notified.",
+    "howToApply": "Visit www.jkssb.nic.in and open Advertisement Notification No. 11 of 2026\nRegister or log in on the online portal from 30 November 2026\nEnter name, date of birth, father's and mother's names exactly as in the Matriculation Certificate\nSelect Item No. 266 (Jal Shakti) and/or Item No. 267 (PW R&B) and set preferences\nUpload live photograph and signature (10 KB to 20 KB each), category certificate (PDF, max 200 KB) and qualification certificates (self-attested PDF, max 200 KB)\nPay the fee online (Net Banking, Credit Card or Debit Card)\nReview everything, then submit. Corrections may not be allowed after submission\nSave and print the application. Do not send a hard copy unless instructed. In-service candidates must apply through their Head of Department",
+    "documents": "Diploma / Degree / AMIE certificate\nMatriculation Certificate (proof of name and date of birth)\nValid Domicile Certificate (J&K)\nCategory / reservation certificate, if applicable\nPrinted copy of the submitted application and original photo ID proof\nTwo recent passport-size colour photographs (not older than 6 months, bearing the date)\nBonafide Certificate for degrees from non-J&K universities (except Central Universities), if applicable\nEx-Servicemen certificate (Form-XIV) and affidavit, if applicable",
+    "applyUrl": "https://www.jkssb.nic.in",
+    "notificationUrl": "https://www.jkssb.nic.in",
+    "officialWebsite": "www.jkssb.nic.in",
+    "poster": "posters/jkssb-je-civil-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Notification release (Advt. 11 of 2026)",
+        "date": "27-10-2026"
       },
       {
-        "label": "Official Notification (PDF)",
-        "url": "https://jkadworld.com/wp-content/uploads/2026/11/adv-12.pdf"
+        "event": "Online application start",
+        "date": "30-11-2026"
+      },
+      {
+        "event": "Last date to apply",
+        "date": "29-12-2026"
+      },
+      {
+        "event": "Written test date",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "General / OM / OBC / RBA / ALC-IB",
+        "fee": "Rs 600"
+      },
+      {
+        "category": "SC / ST-1 / ST-2 / EWS / PwBD",
+        "fee": "Rs 500"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "SC / ST-1 / ST-2 / OBC / RBA / ALC-IB / EWS",
+        "relaxation": "Max age 43 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "Max age 42 years"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service deducted from age, within the notification's limit"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Junior Engineer (Civil) - Jal Shakti Department (Item 266)",
+        "vacancies": "282",
+        "qualification": "Diploma / Degree / AMIE (Civil)"
+      },
+      {
+        "post": "Junior Engineer (Civil) - Public Works R&B Department (Item 267)",
+        "vacancies": "176",
+        "qualification": "Diploma / Degree / AMIE (Civil)"
+      }
+    ],
+    "categoryWise": [
+      {
+        "category": "Open Merit (OM)",
+        "vacancies": "184"
+      },
+      {
+        "category": "Scheduled Castes (SC)",
+        "vacancies": "37"
+      },
+      {
+        "category": "Scheduled Tribes (ST-1)",
+        "vacancies": "46"
+      },
+      {
+        "category": "Scheduled Tribes (ST-2)",
+        "vacancies": "46"
+      },
+      {
+        "category": "Other Backward Classes (OBC)",
+        "vacancies": "36"
+      },
+      {
+        "category": "ALC / IB (near LoC / International Border)",
+        "vacancies": "18"
+      },
+      {
+        "category": "Residents of Backward Areas (RBA)",
+        "vacancies": "45"
+      },
+      {
+        "category": "Economically Weaker Sections (EWS)",
+        "vacancies": "46"
+      }
+    ],
+    "uploadSpecs": [
+      {
+        "document": "Live photograph",
+        "dimensions": "-",
+        "fileSize": "10 KB to 20 KB"
+      },
+      {
+        "document": "Signature",
+        "dimensions": "-",
+        "fileSize": "10 KB to 20 KB"
+      },
+      {
+        "document": "Category certificate (PDF)",
+        "dimensions": "-",
+        "fileSize": "Max 200 KB"
+      },
+      {
+        "document": "Qualification certificates (self-attested PDF)",
+        "dimensions": "-",
+        "fileSize": "Max 200 KB"
+      }
+    ],
+    "links": [
+      {
+        "label": "JKSSB Official Website",
+        "url": "https://www.jkssb.nic.in"
+      }
+    ]
+  },
+  {
+    "id": "jkssb-je-mechanical-2026-r2",
+    "type": "job",
+    "title": "JKSSB Junior Engineer (Mechanical) Recruitment 2026 - 127 Posts (PWD R&B)",
+    "board": "JKSSB (Jammu & Kashmir Services Selection Board)",
+    "postName": "Junior Engineer (Mechanical)",
+    "advtNo": "Advt. Notification No. 10 of 2026 (Item No. 265)",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "state",
+      "engineering"
+    ],
+    "edu": [
+      "Diploma",
+      "B.Tech/B.E"
+    ],
+    "vacancy": "127",
+    "qualificationText": "3-year Diploma in Mechanical Engineering, or Degree in Mechanical Engineering, or AMIE Section A & B",
+    "appMode": "Online",
+    "postDate": "2026-10-21",
+    "startDate": "2026-11-16",
+    "lastDate": "2026-12-15",
+    "ageMin": "18",
+    "ageMax": "40",
+    "ageAsOn": "2026-01-01",
+    "salary": "Pay Level-6: Rs 35,400 - Rs 1,12,400 per month plus allowances",
+    "shortInfo": "JKSSB has invited online applications for 127 Junior Engineer (Mechanical) posts in the Public Works (R&B) Department, UT Cadre (Item No. 265), under Advertisement No. 10 of 2026. Applications run from 16 November to 15 December 2026. Selection is by an objective OMR-based written test followed by document verification. Only J&K domicile holders can apply.",
+    "eligibilityNotes": "Must be a domicile of the UT of J&K with a valid Domicile Certificate issued on or before 15.12.2026.\nQualification (any one): 3-year Diploma in Mechanical Engineering from a government-recognised institute, Degree in Mechanical Engineering from an Indian university, or AMIE Section A & B (India). It must be obtained on or before 15.12.2026.\nAge is counted as on 01.01.2026. Minimum 18 years. Upper limit: 40 years (OM), 43 years (SC, ST-1, ST-2, OBC, RBA, ALC/IB, EWS), 42 years (PwBD).\nEx-Servicemen: period of military service is deducted from actual age, within the 3-year tolerance of the notification.\nVacancies may change before selection ends, and the recruitment is subject to a pending court case.",
+    "selection": "Objective-type (MCQ) written / OMR examination, English only. Negative marking: one-fourth of the marks for each wrong answer.\nMerit is based on the written examination only, followed by document verification. No interview.\nExam date, admit card and syllabus will be announced separately by JKSSB.",
+    "howToApply": "Visit www.jkssb.nic.in and open the link for Notification No. 10 of 2026, Item No. 265\nEnter name, date of birth and parents' names exactly as in the Matriculation Certificate\nFill in category, qualification and any ESM, PwBD or in-service details\nUpload live photograph and signature (10 KB to 20 KB each) and PDFs (up to 200 KB) as required\nPay the fee online (Net Banking, Credit Card or Debit Card)\nSubmit, note the application number and save a printout. Do not send hard copies to the Board",
+    "documents": "Printout of the submitted application\nOriginals and self-attested copies of Matriculation, qualification, Domicile and category certificates\nTwo recent passport-size photographs (not older than 6 months) and original photo ID\nBonafide Certificate if the degree is from a non-Central university outside J&K\nEx-Servicemen: Form-XIV and affidavit before a 1st Class Judicial Magistrate\nIn-service candidates: signed and stamped certificate through the Head of Department",
+    "applyUrl": "https://www.jkssb.nic.in",
+    "notificationUrl": "https://www.jkssb.nic.in",
+    "officialWebsite": "www.jkssb.nic.in",
+    "poster": "posters/jkssb-je-mechanical-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Notification release (Advt. 10 of 2026)",
+        "date": "21-10-2026"
+      },
+      {
+        "event": "Online application start",
+        "date": "16-11-2026"
+      },
+      {
+        "event": "Last date to apply",
+        "date": "15-12-2026"
+      },
+      {
+        "event": "Written test date",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "General / OM / OBC / RBA / ALC-IB",
+        "fee": "Rs 600"
+      },
+      {
+        "category": "SC / ST-1 / ST-2 / EWS / PwBD",
+        "fee": "Rs 500"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "SC / ST-1 / ST-2 / OBC / RBA / ALC-IB / EWS",
+        "relaxation": "Max age 43 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "Max age 42 years"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service deducted from age, within 3-year tolerance"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Junior Engineer (Mechanical) - PWD (R&B) Department (Item 265)",
+        "vacancies": "127",
+        "qualification": "Diploma / Degree / AMIE (Mechanical)"
+      }
+    ],
+    "categoryWise": [
+      {
+        "category": "Open Merit (OM)",
+        "vacancies": "51"
+      },
+      {
+        "category": "Scheduled Castes (SC)",
+        "vacancies": "10"
+      },
+      {
+        "category": "Scheduled Tribes (ST-1)",
+        "vacancies": "13"
+      },
+      {
+        "category": "Scheduled Tribes (ST-2)",
+        "vacancies": "13"
+      },
+      {
+        "category": "Other Backward Classes (OBC)",
+        "vacancies": "10"
+      },
+      {
+        "category": "ALC / IB (near LoC / International Border)",
+        "vacancies": "5"
+      },
+      {
+        "category": "Residents of Backward Areas (RBA)",
+        "vacancies": "13"
+      },
+      {
+        "category": "Economically Weaker Sections (EWS)",
+        "vacancies": "12"
+      }
+    ],
+    "uploadSpecs": [
+      {
+        "document": "Live photograph",
+        "dimensions": "-",
+        "fileSize": "10 KB to 20 KB"
+      },
+      {
+        "document": "Signature",
+        "dimensions": "-",
+        "fileSize": "10 KB to 20 KB"
+      },
+      {
+        "document": "Certificates (PDF)",
+        "dimensions": "-",
+        "fileSize": "Max 200 KB"
+      }
+    ],
+    "links": [
+      {
+        "label": "JKSSB Official Website",
+        "url": "https://www.jkssb.nic.in"
+      }
+    ]
+  },
+  {
+    "id": "skuast-jammu-accounts-assistant-2026-r2",
+    "type": "job",
+    "title": "SKUAST Jammu Recruitment 2026 - 3 Accounts Assistant / Cashier Posts",
+    "board": "SKUAST-Jammu (Sher-e-Kashmir University of Agricultural Sciences and Technology of Jammu)",
+    "postName": "Accounts Assistant / Cashier",
+    "advtNo": "Advt. Notification No. 10 (Secy.) of 2026",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "state"
+    ],
+    "edu": [
+      "Any Graduate",
+      "Post Graduate",
+      "PhD"
+    ],
+    "vacancy": "3",
+    "qualificationText": "Graduation with 50% marks (45% for reserved categories) from a recognised university. Post Graduate with 50% marks or PhD also eligible.",
+    "appMode": "Online",
+    "postDate": "2026-11-09",
+    "startDate": "2026-11-16",
+    "lastDate": "2026-12-15",
+    "ageMin": "18",
+    "ageMax": "40",
+    "ageAsOn": "2026-01-01",
+    "salary": "Training stipend Rs 6,000/month for 1 year, then Pay Level-5: Rs 29,200 - Rs 92,300",
+    "shortInfo": "SKUAST-Jammu (Chatha Campus) has invited online applications for 3 posts of Accounts Assistant/Cashier (2 Open Merit, 1 SC) under Advertisement No. 10 (Secy.) of 2026. Selection is by a 100-mark written examination only. Selected candidates first undergo a one-year training (Rs 6,000 per month) and are then placed in Pay Level-5. Only J&K domicile holders can apply.",
+    "eligibilityNotes": "Must hold a valid J&K UT Domicile Certificate issued on or before the last date of online application.\nGraduation (any stream) from a recognised university: minimum 50% marks for Open Merit, 45% for reserved categories. Post Graduates with 50% marks and PhD holders are also eligible.\nThe qualification must be held on or before the last date of online application. Degrees from universities declared fake by UGC are not accepted.\nEquivalent qualifications need an equivalence certificate from the competent authority at document verification; the University's decision is final.\nAge is counted as on 01.01.2026: 18-40 years (OM), 18-43 years (reserved categories), 18-42 years (PwBD), 18-50 years (in-service employees of J&K State Universities).\nEx-Servicemen: military service is deducted from actual age; allowed up to 3 years above the upper limit. Candidate should not have been born after 01.01.2008.\nSelected candidates must qualify the ACC examination during probation within the prescribed time; otherwise future increments are stopped until it is passed.",
+    "selection": "Written examination only (100% weightage): 100 marks, 2 hours. No separate interview weightage is mentioned.\nThe detailed syllabus is given in Annexure-I of the official advertisement.\nTraining: selected candidates undergo a one-year training course - first 6 months theoretical, next 6 months practical - on a stipend of Rs 6,000 per month.\nAfter successful completion of training they are granted Pay Level-5 (Rs 29,200 - Rs 92,300).",
+    "howToApply": "Visit the official website skuastjammu.ac.in and open the Recruitment / Requirement Notices section\nRead Advertisement No. 10 (Secy.) of 2026 carefully, including Annexure-I (syllabus)\nRegister and fill in the online application form from 16 November 2026\nUpload the required documents\nPay the fee online (Net Banking, Credit Card or Debit Card) - fee is non-refundable and non-adjustable\nSubmit the application by 15 December 2026 and save a printout\nIn-service candidates must also send their form through proper channel so that it reaches the Registrar, SKUAST-Jammu, Main Campus, Chatha, Jammu, PIN 180009 by 14 January 2027\nApply early - heavy traffic near the last date can cause technical problems",
+    "documents": "Valid J&K Domicile Certificate (issued on or before 15-12-2026)\nGraduation / Post Graduation / PhD degree and marksheets (50% for OM, 45% for reserved)\nCategory / reservation certificate, if applicable (SC, PwBD etc.)\nEquivalence certificate, if claiming an equivalent qualification\nEx-Servicemen service proof, if claiming age relaxation\nNo-objection / proper channel forwarding for in-service candidates\nPhoto ID proof, recent photograph and signature\nNote: the complete document and upload checklist is in the official notification",
+    "applyUrl": "https://skuastjammu.ac.in/newsite/Requrement-notices.php",
+    "notificationUrl": "https://skuastjammu.ac.in/newsite/Requrement-notices.php",
+    "officialWebsite": "skuastjammu.ac.in",
+    "poster": "posters/skuast-jammu-accounts-assistant-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Notification release (Advt. 10 Secy. of 2026)",
+        "date": "09-11-2026"
+      },
+      {
+        "event": "Online application start",
+        "date": "16-11-2026"
+      },
+      {
+        "event": "Last date to apply online",
+        "date": "15-12-2026"
+      },
+      {
+        "event": "Last date for in-service candidates' form to reach Registrar",
+        "date": "14-01-2027"
+      },
+      {
+        "event": "Written examination date",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "Open Category",
+        "fee": "Rs 1,000"
+      },
+      {
+        "category": "Reserved Categories",
+        "fee": "Rs 700"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Accounts Assistant / Cashier",
+        "vacancies": "3",
+        "qualification": "Graduate (50%) / PG (50%) / PhD"
+      }
+    ],
+    "categoryWise": [
+      {
+        "category": "Open Merit (OM)",
+        "vacancies": "2"
+      },
+      {
+        "category": "Scheduled Caste (SC)",
+        "vacancies": "1"
+      },
+      {
+        "category": "ST-I / ST-II / RBA / OBC / ALC-IB / EWS",
+        "vacancies": "0"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "Reserved Categories",
+        "relaxation": "Max age 43 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "Max age 42 years"
+      },
+      {
+        "category": "In-service employees of J&K State Universities",
+        "relaxation": "Max age 50 years"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service deducted from age; allowed up to 3 years above the limit"
+      }
+    ],
+    "examPattern": [
+      {
+        "subject": "Written Examination (syllabus in Annexure-I)",
+        "questions": "-",
+        "marks": "100"
+      },
+      {
+        "subject": "Duration: 2 hours | Weightage: 100%",
+        "questions": "-",
+        "marks": "-"
+      }
+    ],
+    "links": [
+      {
+        "label": "SKUAST-Jammu Official Website",
+        "url": "https://skuastjammu.ac.in/"
+      },
+      {
+        "label": "Recruitment / Requirement Notices",
+        "url": "https://skuastjammu.ac.in/newsite/Requrement-notices.php"
+      }
+    ]
+  },
+  {
+    "id": "jk-bank-ba-po-2026-r2",
+    "type": "job",
+    "title": "J&K Bank Recruitment 2026 - 1053 Banking Associate & Probationary Officer Posts",
+    "board": "Jammu & Kashmir Bank Ltd. (J&K Bank)",
+    "postName": "Banking Associate & Probationary Officer",
+    "advtNo": "JKB/HR/Rectt/2026-493 & 494",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "bank"
+    ],
+    "edu": [
+      "Any Graduate"
+    ],
+    "vacancy": "1053",
+    "qualificationText": "Graduation in any discipline (degree or marksheet needed by 26-11-2026)",
+    "appMode": "Online",
+    "postDate": "2026-11-07",
+    "startDate": "2026-11-07",
+    "lastDate": "2026-11-26",
+    "ageMin": "20",
+    "ageMax": "30",
+    "ageAsOn": "2026-01-01",
+    "salary": "BA: Rs 24,050 basic. PO: Rs 48,480 basic",
+    "shortInfo": "J&K Bank has released two notifications for 1,053 posts: 1,033 Banking Associate posts (J&K UT domicile) and 20 Probationary Officer posts (Ladakh UT domicile). Both use the same application and fee window, which closes on 26 November 2026.",
+    "eligibilityNotes": "Banking Associate: J&K UT domicile with a valid domicile certificate.\nProbationary Officer: Ladakh UT domicile.\nBachelor's degree in any discipline from a recognised university. Final-year students who will not finish by 26-11-2026 are not eligible. CGPA/OGPA must be converted to a percentage as per the university formula.\nAge: 20 to 30 years as on 01.01.2026, before relaxation.\nBanking Associate reservation: SC 8%, ST 10% (existing) + 10% (newly added), OBC 8%, ALC/IB 4%, RBA 10%, EWS 10%, Ex-Servicemen 6% and PwBD 4% (horizontal).\nProbationary Officer (Ladakh) reservation: SC 1%, ST 80%, residents of areas adjoining ALC 4%, EWS 10%, PwBD 4% (horizontal).\nA category certificate is needed at online registration if you claim reservation.",
+    "selection": "Banking Associate: one online exam conducted by IBPS (100 questions, 100 marks, 60 minutes, English, negative marking 1/4), then provisional selection and document verification. No interview. Minimum qualifying marks: 40% (General) and 35% (reserved). Former J&K Bank apprentices with J&K domicile get 2.5 extra marks.\nProbationary Officer: Preliminary online exam, Main exam (objective + descriptive essay/comprehension), then a 100-mark interview. Final merit = 80% Main + 20% Interview. Preliminary marks are used only for shortlisting.",
+    "howToApply": "Visit the official website jkb.bank.in (Careers section) from 7 November 2026\nRegister and log in\nFill in the online form, including graduation percentage\nUpload photograph, signature and other documents as asked\nPay the fee online (Debit / Credit Card, Net Banking, IMPS or wallet)\nSubmit the application and save a printout",
+    "documents": "Graduation degree certificate or marksheet (valid by 26-11-2026)\nValid domicile certificate: J&K UT for Banking Associate, Ladakh UT for Probationary Officer\nCategory certificate, if claiming reservation (needed at registration)\nPhoto ID proof and a recent photograph and signature",
+    "applyUrl": "https://jkb.bank.in",
+    "officialWebsite": "jkb.bank.in",
+    "poster": "posters/jk-bank-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Online application start",
+        "date": "07-11-2026"
+      },
+      {
+        "event": "Last date to apply",
+        "date": "26-11-2026"
+      },
+      {
+        "event": "Last date for fee payment",
+        "date": "26-11-2026"
+      },
+      {
+        "event": "Banking Associate exam date",
+        "date": "To be announced"
+      },
+      {
+        "event": "PO preliminary / main / interview dates",
+        "date": "To be announced"
+      },
+      {
+        "event": "Call letter release",
+        "date": "To be notified separately"
+      }
+    ],
+    "fees": [
+      {
+        "category": "Banking Associate: SC / ST / SEBC / PwBD / Ex-Servicemen",
+        "fee": "Rs 600 + GST"
+      },
+      {
+        "category": "Banking Associate: All other candidates",
+        "fee": "Rs 800 + GST"
+      },
+      {
+        "category": "Probationary Officer: SC / ST / SEBC / PwBD",
+        "fee": "Rs 1,000 + GST"
+      },
+      {
+        "category": "Probationary Officer: All other candidates",
+        "fee": "Rs 1,200 + GST"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "SC / ST",
+        "relaxation": "5 years"
+      },
+      {
+        "category": "OBC / ALC-IB / RBA",
+        "relaxation": "3 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "10 years"
+      },
+      {
+        "category": "EWS",
+        "relaxation": "No extra age relaxation"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service + 3 years (max age 48)"
+      },
+      {
+        "category": "Former J&K Bank apprentices (completed training, J&K domicile)",
+        "relaxation": "+1 year"
+      },
+      {
+        "category": "Ladakh PO: SC / ST / ALC candidates",
+        "relaxation": "5 years, plus a one-time extra 5 years for 2025-26 recruitments (max age 56)"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Banking Associate (J&K UT domicile)",
+        "vacancies": "1033",
+        "qualification": "Graduation in any discipline"
+      },
+      {
+        "post": "Probationary Officer (Ladakh UT domicile)",
+        "vacancies": "20",
+        "qualification": "Graduation in any discipline"
+      }
+    ],
+    "examPattern": [
+      {
+        "subject": "Banking Associate: English Language",
+        "questions": "30",
+        "marks": "30"
+      },
+      {
+        "subject": "Banking Associate: Quantitative Aptitude",
+        "questions": "35",
+        "marks": "30"
+      },
+      {
+        "subject": "Banking Associate: Reasoning Ability",
+        "questions": "35",
+        "marks": "40"
+      },
+      {
+        "subject": "Banking Associate: Total (60 minutes)",
+        "questions": "100",
+        "marks": "100"
+      },
+      {
+        "subject": "PO Main: Reasoning",
+        "questions": "40",
+        "marks": "60"
+      },
+      {
+        "subject": "PO Main: General / Economy / Banking / Digital & Financial Awareness (incl. RBI)",
+        "questions": "50",
+        "marks": "60"
+      },
+      {
+        "subject": "PO Main: English Language",
+        "questions": "40",
+        "marks": "20"
+      },
+      {
+        "subject": "PO Main: Data Analysis & Interpretation",
+        "questions": "40",
+        "marks": "60"
+      },
+      {
+        "subject": "PO Main: Descriptive (Essay & Comprehension)",
+        "questions": "2",
+        "marks": "25"
+      },
+      {
+        "subject": "PO Interview",
+        "questions": "-",
+        "marks": "100"
+      }
+    ],
+    "links": [
+      {
+        "label": "J&K Bank Careers (jkb.bank.in)",
+        "url": "https://jkb.bank.in"
+      }
+    ]
+  },
+  {
+    "id": "rrb-station-master-2026-r2",
+    "type": "job",
+    "title": "RRB Station Master Recruitment 2026 - 1265 Posts (CEN 08/2026)",
+    "board": "Railway Recruitment Boards (RRB)",
+    "postName": "Station Master",
+    "advtNo": "CEN 08/2026",
+    "state": "All India",
+    "cats": [
+      "railway",
+      "central"
+    ],
+    "edu": [
+      "Any Graduate"
+    ],
+    "vacancy": "1265",
+    "qualificationText": "Bachelor's Degree from a recognised university (must be completed by 25-11-2026)",
+    "appMode": "Online",
+    "postDate": "2026-10-26",
+    "startDate": "2026-10-27",
+    "lastDate": "2026-11-25",
+    "ageMin": "20",
+    "ageMax": "33",
+    "ageAsOn": "2027-01-01",
+    "salary": "Rs 35,400 per month basic (Level 6, 7th CPC)",
+    "shortInfo": "Indian Railways, through the Railway Recruitment Boards, has opened online applications for 1,265 Station Master posts under CEN 08/2026. Vacancies were corrected from 1,215 to 1,265 by Corrigendum No. 1 dated 27-10-2026. Apply at rrbapply.gov.in by 25 November 2026 (11:59 PM). You can apply to only one RRB.",
+    "eligibilityNotes": "Bachelor's Degree or equivalent from a recognised university, completed by 25-11-2026. Candidates awaiting final results are not eligible.\nAge: 20 to 33 years as on 01-01-2027. Relaxation: OBC-NCL 3 years, SC/ST 5 years, and other government rules.\nMust meet the A-2 medical standard for Station Master.\nCandidates must apply to only one RRB. Multiple applications may lead to rejection.",
+    "selection": "Computer Based Test (CBT): 100 questions, 100 marks, 120 minutes. Negative marking: 1/3 mark per wrong answer.\nCBT sections: Basic Science, Mathematical & Analytical Capability (60 Q), Logical Capability (20 Q), Mental Reasoning (20 Q).\nThen Computer Based Aptitude Test (CBAT), document verification and medical examination.\nFinal merit: 70% CBT + 30% CBAT.",
+    "howToApply": "Visit rrbapply.gov.in\nClick Create an Account (new) or Already Have an Account (login)\nComplete account verification and enter personal details\nFill in educational qualification and category details\nSelect the Railway Recruitment Board and your preferences carefully\nUpload live photograph, signature and documents as the portal asks\nReview all details and submit\nPay the exam fee online\nDownload and print the application form",
+    "documents": "Live photograph and signature, as per portal instructions\nBachelor's degree / marksheets\nCategory or concession certificate, if claimed\nRegistered mobile number and email ID for login and OTP",
+    "applyUrl": "https://rrbapply.gov.in",
+    "officialWebsite": "rrb.indianrailways.gov.in",
+    "poster": "posters/rrb-station-master-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Detailed notification",
+        "date": "26-10-2026"
+      },
+      {
+        "event": "Online application start",
+        "date": "27-10-2026"
+      },
+      {
+        "event": "Last date to apply (11:59 PM)",
+        "date": "25-11-2026"
+      },
+      {
+        "event": "Last date for fee payment",
+        "date": "27-11-2026"
+      },
+      {
+        "event": "Application correction window",
+        "date": "28-11-2026 to 07-12-2026"
+      },
+      {
+        "event": "CBT exam date / admit card",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "All candidates except concessional categories",
+        "fee": "Rs 500"
+      },
+      {
+        "category": "SC / ST / Female / Transgender / Ex-Servicemen / Minority / EBC",
+        "fee": "Rs 250"
+      },
+      {
+        "category": "Refund after appearing in CBT (Rs 500 category)",
+        "fee": "Rs 400 (bank charges apply)"
+      },
+      {
+        "category": "Refund after appearing in CBT (Rs 250 category)",
+        "fee": "Rs 250 (bank charges apply)"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "OBC-NCL",
+        "relaxation": "3 years"
+      },
+      {
+        "category": "SC / ST",
+        "relaxation": "5 years"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Station Master",
+        "vacancies": "1265",
+        "qualification": "Bachelor's Degree"
+      }
+    ],
+    "examPattern": [
+      {
+        "subject": "Basic Science, Mathematical & Analytical Capability",
+        "questions": "60",
+        "marks": "60"
+      },
+      {
+        "subject": "Logical Capability",
+        "questions": "20",
+        "marks": "20"
+      },
+      {
+        "subject": "Mental Reasoning",
+        "questions": "20",
+        "marks": "20"
+      },
+      {
+        "subject": "Total (120 minutes, 1/3 negative marking)",
+        "questions": "100",
+        "marks": "100"
+      }
+    ],
+    "links": [
+      {
+        "label": "RRB Apply Login (rrbapply.gov.in)",
+        "url": "https://rrbapply.gov.in"
+      },
+      {
+        "label": "RRB Official Website",
+        "url": "https://rrb.indianrailways.gov.in"
       }
     ]
   }
