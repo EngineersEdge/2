@@ -1,5 +1,135 @@
 [
   {
+    "id": "skuast-jammu-accounts-assistant-2026",
+    "type": "job",
+    "title": "SKUAST Jammu Recruitment 2026 - 3 Accounts Assistant / Cashier Posts",
+    "board": "SKUAST-Jammu (Sher-e-Kashmir University of Agricultural Sciences and Technology of Jammu)",
+    "postName": "Accounts Assistant / Cashier",
+    "advtNo": "Advt. Notification No. 10 (Secy.) of 2026",
+    "state": "Jammu & Kashmir",
+    "cats": [
+      "state"
+    ],
+    "edu": [
+      "Any Graduate",
+      "Post Graduate",
+      "PhD"
+    ],
+    "vacancy": "3",
+    "qualificationText": "Graduation with 50% marks (45% for reserved categories) from a recognised university. Post Graduate with 50% marks or PhD also eligible.",
+    "appMode": "Online",
+    "postDate": "2026-11-09",
+    "startDate": "2026-11-16",
+    "lastDate": "2026-12-15",
+    "ageMin": "18",
+    "ageMax": "40",
+    "ageAsOn": "2026-01-01",
+    "salary": "Training stipend Rs 6,000/month for 1 year, then Pay Level-5: Rs 29,200 - Rs 92,300",
+    "shortInfo": "SKUAST-Jammu (Chatha Campus) has invited online applications for 3 posts of Accounts Assistant/Cashier (2 Open Merit, 1 SC) under Advertisement No. 10 (Secy.) of 2026. Selection is by a 100-mark written examination only. Selected candidates first undergo a one-year training (Rs 6,000 per month) and are then placed in Pay Level-5. Only J&K domicile holders can apply.",
+    "eligibilityNotes": "Must hold a valid J&K UT Domicile Certificate issued on or before the last date of online application.\nGraduation (any stream) from a recognised university: minimum 50% marks for Open Merit, 45% for reserved categories. Post Graduates with 50% marks and PhD holders are also eligible.\nThe qualification must be held on or before the last date of online application. Degrees from universities declared fake by UGC are not accepted.\nEquivalent qualifications need an equivalence certificate from the competent authority at document verification; the University's decision is final.\nAge is counted as on 01.01.2026: 18-40 years (OM), 18-43 years (reserved categories), 18-42 years (PwBD), 18-50 years (in-service employees of J&K State Universities).\nEx-Servicemen: military service is deducted from actual age; allowed up to 3 years above the upper limit. Candidate should not have been born after 01.01.2008.\nSelected candidates must qualify the ACC examination during probation within the prescribed time; otherwise future increments are stopped until it is passed.",
+    "selection": "Written examination only (100% weightage): 100 marks, 2 hours. No separate interview weightage is mentioned.\nThe detailed syllabus is given in Annexure-I of the official advertisement.\nTraining: selected candidates undergo a one-year training course - first 6 months theoretical, next 6 months practical - on a stipend of Rs 6,000 per month.\nAfter successful completion of training they are granted Pay Level-5 (Rs 29,200 - Rs 92,300).",
+    "howToApply": "Visit the official website skuastjammu.ac.in and open the Recruitment / Requirement Notices section\nRead Advertisement No. 10 (Secy.) of 2026 carefully, including Annexure-I (syllabus)\nRegister and fill in the online application form from 16 November 2026\nUpload the required documents\nPay the fee online (Net Banking, Credit Card or Debit Card) - fee is non-refundable and non-adjustable\nSubmit the application by 15 December 2026 and save a printout\nIn-service candidates must also send their form through proper channel so that it reaches the Registrar, SKUAST-Jammu, Main Campus, Chatha, Jammu, PIN 180009 by 14 January 2027\nApply early - heavy traffic near the last date can cause technical problems",
+    "documents": "Valid J&K Domicile Certificate (issued on or before 15-12-2026)\nGraduation / Post Graduation / PhD degree and marksheets (50% for OM, 45% for reserved)\nCategory / reservation certificate, if applicable (SC, PwBD etc.)\nEquivalence certificate, if claiming an equivalent qualification\nEx-Servicemen service proof, if claiming age relaxation\nNo-objection / proper channel forwarding for in-service candidates\nPhoto ID proof, recent photograph and signature\nNote: the complete document and upload checklist is in the official notification",
+    "applyUrl": "https://skuastjammu.ac.in/newsite/Requrement-notices.php",
+    "notificationUrl": "https://skuastjammu.ac.in/newsite/Requrement-notices.php",
+    "officialWebsite": "skuastjammu.ac.in",
+    "poster": "posters/skuast-jammu-accounts-assistant-2026.jpg",
+    "featured": true,
+    "dates": [
+      {
+        "event": "Notification release (Advt. 10 Secy. of 2026)",
+        "date": "09-11-2026"
+      },
+      {
+        "event": "Online application start",
+        "date": "16-11-2026"
+      },
+      {
+        "event": "Last date to apply online",
+        "date": "15-12-2026"
+      },
+      {
+        "event": "Last date for in-service candidates' form to reach Registrar",
+        "date": "14-01-2027"
+      },
+      {
+        "event": "Written examination date",
+        "date": "To be announced"
+      }
+    ],
+    "fees": [
+      {
+        "category": "Open Category",
+        "fee": "Rs 1,000"
+      },
+      {
+        "category": "Reserved Categories",
+        "fee": "Rs 700"
+      }
+    ],
+    "postWise": [
+      {
+        "post": "Accounts Assistant / Cashier",
+        "vacancies": "3",
+        "qualification": "Graduate (50%) / PG (50%) / PhD"
+      }
+    ],
+    "categoryWise": [
+      {
+        "category": "Open Merit (OM)",
+        "vacancies": "2"
+      },
+      {
+        "category": "Scheduled Caste (SC)",
+        "vacancies": "1"
+      },
+      {
+        "category": "ST-I / ST-II / RBA / OBC / ALC-IB / EWS",
+        "vacancies": "0"
+      }
+    ],
+    "ageRelax": [
+      {
+        "category": "Reserved Categories",
+        "relaxation": "Max age 43 years"
+      },
+      {
+        "category": "PwBD",
+        "relaxation": "Max age 42 years"
+      },
+      {
+        "category": "In-service employees of J&K State Universities",
+        "relaxation": "Max age 50 years"
+      },
+      {
+        "category": "Ex-Servicemen",
+        "relaxation": "Military service deducted from age; allowed up to 3 years above the limit"
+      }
+    ],
+    "examPattern": [
+      {
+        "subject": "Written Examination (syllabus in Annexure-I)",
+        "questions": "-",
+        "marks": "100"
+      },
+      {
+        "subject": "Duration: 2 hours | Weightage: 100%",
+        "questions": "-",
+        "marks": "-"
+      }
+    ],
+    "links": [
+      {
+        "label": "SKUAST-Jammu Official Website",
+        "url": "https://skuastjammu.ac.in/"
+      },
+      {
+        "label": "Recruitment / Requirement Notices",
+        "url": "https://skuastjammu.ac.in/newsite/Requrement-notices.php"
+      }
+    ]
+  },
+  {
     "id": "jkssb-mts-class-iv-2026",
     "type": "job",
     "title": "JKSSB MTS / Class-IV & Sanitation Worker Recruitment 2026 - 2863 Posts",
