@@ -195,6 +195,85 @@
         dl(new Blob([await d.save()], { type: 'application/pdf' }), base(files[0].name) + '-pages.pdf');
         return o.act === 'del' ? `${sel.length} page(s) deleted. ${n - sel.length} page(s) left.` : `${sel.length} page(s) rotated.`;
       } },
+    { id: 'aadhaar', title: 'Aadhaar to PVC Card', desc: 'Open your Aadhaar PDF with its password and get the front and back in full colour at exact PVC card size (85.6 x 54 mm), ready to print. Runs in your browser; the PDF and password are not uploaded.', files: '.pdf,application/pdf',
+      opts: [
+        { k: 'pw', label: 'PDF password: first 4 letters of the name in CAPITALS + birth year (example RAJE1990)', type: 'password', value: '' },
+        { k: 'layout', label: 'Print layout', type: 'select', options: [['stack', 'A4 sheet: front above back'], ['side', 'A4 sheet: front and back side by side'], ['card', 'Card-size pages: page 1 front, page 2 back']] },
+        { k: 'round', label: 'Corners', type: 'select', options: [['0', 'Square'], ['1', 'Rounded (PVC style)']] }
+      ],
+      async run(files, o, log, out) {
+        let pdf;
+        try { pdf = await pdfjsLib.getDocument({ data: await readBuf(files[0]), password: o.pw.trim() }).promise; }
+        catch (e) { throw new Error(e && e.name === 'PasswordException' ? (e.code === 1 ? 'This PDF needs a password. Enter it above.' : 'Wrong password. Use the first 4 letters of the name in CAPITALS followed by the birth year.') : 'This PDF could not be opened. It may be damaged.'); }
+        log('Reading the PDF ...');
+        const page = await pdf.getPage(1), vp = page.getViewport({ scale: 4 });
+        const pc = document.createElement('canvas'); pc.width = vp.width; pc.height = vp.height;
+        const px = pc.getContext('2d'); px.fillStyle = '#fff'; px.fillRect(0, 0, pc.width, pc.height);
+        await page.render({ canvasContext: px, viewport: vp }).promise;
+
+        const DEF = { F: [4, 52, 45, 28], B: [51, 52, 45, 28] }; // x, y, w, h in % of the page
+        let areas; try { areas = JSON.parse(localStorage.getItem('ee_aadhaar_areas')); } catch { }
+        if (!areas || !areas.F || !areas.B) areas = JSON.parse(JSON.stringify(DEF));
+        const MM = 72 / 25.4, CW = 85.6 * MM, CH = 54 * MM, round = o.round === '1';
+
+        out.innerHTML = `<p class="muted">Drag on the page below to mark the <b style="color:#16a34a">front</b> or the <b style="color:#dc2626">back</b> of the card. Check the two previews, then download.</p>
+          <div style="margin:8px 0"><label style="display:inline-flex;gap:6px;margin-right:14px"><input type="radio" name="aadside" value="F" checked> Front (green)</label><label style="display:inline-flex;gap:6px;margin-right:14px"><input type="radio" name="aadside" value="B"> Back (red)</label><button type="button" class="btn sm" data-reset>Reset</button></div>
+          <div class="aad-stage" style="position:relative;display:inline-block;max-width:100%;touch-action:none"><canvas class="aad-page" style="max-width:100%;height:auto;display:block;border:1px solid #cbd5e1"></canvas>
+            <div data-s="F" style="position:absolute;pointer-events:none;border:2px solid #16a34a;background:rgba(22,163,74,.12)"></div>
+            <div data-s="B" style="position:absolute;pointer-events:none;border:2px solid #dc2626;background:rgba(220,38,38,.12)"></div></div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin:12px 0"><canvas data-pv="F" style="width:260px;max-width:100%;border:1px solid #cbd5e1;background:#fff"></canvas><canvas data-pv="B" style="width:260px;max-width:100%;border:1px solid #cbd5e1;background:#fff"></canvas></div>
+          <button type="button" class="btn primary" data-make>Download print PDF</button>`;
+        const view = out.querySelector('.aad-page'); view.width = pc.width; view.height = pc.height; view.getContext('2d').drawImage(pc, 0, 0);
+
+        const crop = s => { const a = areas[s], W = pc.width, H = pc.height; const w = Math.max(1, Math.round(a[2] / 100 * W)), h = Math.max(1, Math.round(a[3] / 100 * H)); const c = document.createElement('canvas'); c.width = w; c.height = h; c.getContext('2d').drawImage(pc, Math.round(a[0] / 100 * W), Math.round(a[1] / 100 * H), w, h, 0, 0, w, h); return c; };
+        const refresh = () => {
+          const w = view.clientWidth, h = view.clientHeight;
+          for (const s of ['F', 'B']) {
+            const el = out.querySelector(`[data-s="${s}"]`), a = areas[s];
+            el.style.left = a[0] / 100 * w + 'px'; el.style.top = a[1] / 100 * h + 'px'; el.style.width = a[2] / 100 * w + 'px'; el.style.height = a[3] / 100 * h + 'px';
+            const src = crop(s), pv = out.querySelector(`[data-pv="${s}"]`); pv.width = src.width; pv.height = src.height; pv.getContext('2d').drawImage(src, 0, 0);
+          }
+          try { localStorage.setItem('ee_aadhaar_areas', JSON.stringify(areas)); } catch { }
+        };
+        let start = null;
+        const pos = e => { const r = view.getBoundingClientRect(); return [Math.min(100, Math.max(0, (e.clientX - r.left) / r.width * 100)), Math.min(100, Math.max(0, (e.clientY - r.top) / r.height * 100))]; };
+        view.onpointerdown = e => { view.setPointerCapture(e.pointerId); start = pos(e); };
+        view.onpointermove = e => { if (!start) return; const p = pos(e), s = out.querySelector('input[name=aadside]:checked').value; areas[s] = [Math.min(start[0], p[0]), Math.min(start[1], p[1]), Math.abs(p[0] - start[0]), Math.abs(p[1] - start[1])]; refresh(); };
+        view.onpointerup = () => { start = null; };
+        out.querySelector('[data-reset]').onclick = () => { areas = JSON.parse(JSON.stringify(DEF)); refresh(); };
+        refresh();
+
+        // Resample each card to exactly 85.6 x 54 mm at 600 dpi
+        const cardBlob = async s => {
+          const dpi = 600, w = Math.round(85.6 / 25.4 * dpi), h = Math.round(54 / 25.4 * dpi), c = document.createElement('canvas'); c.width = w; c.height = h;
+          const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, w, h); x.imageSmoothingQuality = 'high';
+          if (round) { const r = Math.round(3.18 / 25.4 * dpi); x.beginPath(); x.moveTo(r, 0); x.arcTo(w, 0, w, h, r); x.arcTo(w, h, 0, h, r); x.arcTo(0, h, 0, 0, r); x.arcTo(0, 0, w, 0, r); x.closePath(); x.clip(); }
+          x.drawImage(crop(s), 0, 0, w, h);
+          return toBlob(c, round ? 'image/png' : 'image/jpeg', 0.95);
+        };
+        out.querySelector('[data-make]').onclick = async e => {
+          const btn = e.target; btn.disabled = true;
+          try {
+            const doc = await PDFLib.PDFDocument.create();
+            const emb = async s => { const ab = await (await cardBlob(s)).arrayBuffer(); return round ? doc.embedPng(ab) : doc.embedJpg(ab); };
+            const F = await emb('F'), B = await emb('B');
+            if (o.layout === 'card') {
+              doc.addPage([CW, CH]).drawImage(F, { x: 0, y: 0, width: CW, height: CH });
+              doc.addPage([CW, CH]).drawImage(B, { x: 0, y: 0, width: CW, height: CH });
+            } else {
+              const W = 595.28, H = 841.89, p = doc.addPage([W, H]), gap = 8 * MM, top = H - 20 * MM - CH;
+              const fx = o.layout === 'side' ? (W - 2 * CW - gap) / 2 : (W - CW) / 2, fy = top;
+              const bx = o.layout === 'side' ? fx + CW + gap : fx, by = o.layout === 'side' ? top : top - gap - CH;
+              p.drawImage(F, { x: fx, y: fy, width: CW, height: CH }); p.drawImage(B, { x: bx, y: by, width: CW, height: CH });
+              for (const [x, y] of [[fx, fy], [bx, by]]) p.drawRectangle({ x, y, width: CW, height: CH, borderColor: PDFLib.rgb(0.6, 0.6, 0.6), borderWidth: 0.3 });
+            }
+            dl(new Blob([await doc.save()], { type: 'application/pdf' }), 'aadhaar-pvc-print.pdf');
+            log('aadhaar-pvc-print.pdf downloaded. Print at 100% / Actual size (not "Fit to page").');
+          } catch (err) { log('Could not make the PDF: ' + (err.message || err)); }
+          btn.disabled = false;
+        };
+        return 'PDF opened. Mark the front and back below, then download.';
+      } },
     { id: 'docxedit', title: 'Word Editor (.docx)', desc: 'Open a Word file, edit the text here, then download it as .docx or print / save as PDF. Text and basic formatting are kept; complex layouts and headers may change.', files: '.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document', opts: [],
       async run(files, o, log, out) {
         if (!window.mammoth) throw new Error('Word reader did not load. Check your internet connection and refresh.');
